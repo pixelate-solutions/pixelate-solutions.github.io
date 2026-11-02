@@ -112,7 +112,7 @@ export default function Portrait({ className = '' }: { className?: string }) {
       aria-valuenow={value}
       aria-valuetext={value > 66 ? 'Mostly engineer' : value < 34 ? 'Mostly seller' : 'Half engineer, half seller'}
       onKeyDown={onKey}
-      className={`portrait group relative aspect-[4/5] touch-pan-y select-none overflow-hidden rounded-[1.75rem] border border-white/10 bg-ink-2 shadow-[0_40px_120px_-40px_rgb(0_0_0/0.9)] ${className}`}
+      className={`portrait group relative aspect-[4/5] cursor-ew-resize touch-pan-y select-none overflow-hidden rounded-[1.75rem] border border-white/10 bg-ink-2 shadow-[0_40px_120px_-40px_rgb(0_0_0/0.9)] ${className}`}
       style={{ ['--split' as string]: '100%' }}
       data-cursor="Drag"
     >
@@ -135,9 +135,9 @@ export default function Portrait({ className = '' }: { className?: string }) {
         />
       </div>
 
-      {/* colour wash: cyan on the engineer side, ember on the seller side */}
-      <div className="pointer-events-none absolute inset-0 mix-blend-soft-light" style={{ background: 'linear-gradient(90deg, rgb(92 225 230 / .35), transparent 45%, transparent 55%, rgb(255 122 69 / .35))' }} />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
+      {/* colour wash: cool on the engineer side, warm on the seller side */}
+      <div className="pointer-events-none absolute inset-0 mix-blend-soft-light" style={{ background: 'linear-gradient(90deg, rgb(159 189 211 / .35), transparent 45%, transparent 55%, rgb(242 107 58 / .35))' }} />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
 
       {/* divider */}
       <div className="pointer-events-none absolute inset-y-0" style={{ left: 'var(--split)' }}>
@@ -149,20 +149,13 @@ export default function Portrait({ className = '' }: { className?: string }) {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.18em] text-bone/70">Fig. 01 — Both</div>
-      <div className="pointer-events-none absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-bone/70">
-            <span className="h-1.5 w-1.5 rounded-full bg-build" /> Engineer
-          </div>
-          <div className="serif-i text-3xl leading-none text-build md:text-4xl">ships.</div>
-        </div>
-        <div className="text-right">
-          <div className="flex items-center justify-end gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-bone/70">
-            Seller <span className="h-1.5 w-1.5 rounded-full bg-sell" />
-          </div>
-          <div className="serif-i text-3xl leading-none text-sell md:text-4xl">sells.</div>
-        </div>
+      <div className="pointer-events-none absolute bottom-4 left-5 right-5 flex items-end justify-between text-[13px] font-medium text-bone/80">
+        <span className="flex items-center gap-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-build" /> Engineer
+        </span>
+        <span className="flex items-center gap-2">
+          Seller <span className="h-1.5 w-1.5 rounded-full bg-sell" />
+        </span>
       </div>
     </div>
   )

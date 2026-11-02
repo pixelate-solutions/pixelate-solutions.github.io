@@ -1,38 +1,24 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Inter Tight';
-  src: url('/fonts/inter-tight.woff2') format('woff2');
+  font-family: 'Cabinet Grotesk';
+  src: url('/fonts/cabinet-grotesk-variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Inter Tight';
-  src: url('/fonts/inter-tight-italic.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Instrument Serif';
-  src: url('/fonts/instrument-serif-italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Instrument Serif';
-  src: url('/fonts/instrument-serif.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi-variable.woff2') format('woff2');
+  font-weight: 300 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('/fonts/jetbrains-mono.woff2') format('woff2');
-  font-weight: 100 800;
-  font-style: normal;
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi-italic-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -44,13 +30,12 @@
   --color-mute: #9a978f;
   --color-dim: #85827b;
   --color-line: rgb(236 233 226 / 0.1);
-  --color-sell: #ff7a45;
-  --color-build: #5ce1e6;
+  --color-sell: #f26b3a;
+  --color-build: #9fbdd3;
   --color-both: #ece9e2;
 
-  --font-sans: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-sans: 'Satoshi', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Cabinet Grotesk', 'Satoshi', ui-sans-serif, system-ui, sans-serif;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
@@ -77,7 +62,15 @@
   }
   body {
     font-family: var(--font-sans);
+    font-weight: 400;
     overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
   }
   ::selection {
     background: var(--color-sell);
@@ -101,24 +94,19 @@
     max-width: 1520px;
     padding-inline: clamp(1.25rem, 4vw, 3.5rem);
   }
+  /* small label: sentence case, body font, muted. Hierarchy comes from size and weight only. */
   .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0;
     color: var(--color-mute);
   }
   .display {
-    font-family: var(--font-sans);
-    font-weight: 600;
-    letter-spacing: -0.045em;
-    line-height: 0.9;
-  }
-  .serif-i {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 0.92;
   }
   .hairline {
     border-color: var(--color-line);
@@ -130,9 +118,10 @@
     border: 1px solid var(--color-line);
     border-radius: 999px;
     padding: 0.32rem 0.7rem;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.02em;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0;
     color: var(--color-bone);
     background: rgb(236 233 226 / 0.03);
     white-space: nowrap;
@@ -154,6 +143,11 @@
     overflow: clip;
     padding-bottom: 0.08em;
     margin-bottom: -0.08em;
+  }
+  /* SplitText line masks: give descenders room so the clip never shaves a "y" or "p". */
+  .reveal-line {
+    padding-bottom: 0.06em;
+    margin-bottom: -0.06em;
   }
   .btn {
     position: relative;
@@ -187,6 +181,28 @@
   }
   .btn-ghost:hover {
     border-color: rgb(236 233 226 / 0.55);
+    background: rgb(236 233 226 / 0.06);
+  }
+  button,
+  [role='button'],
+  [role='tab'],
+  [role='slider'],
+  summary,
+  a[href] {
+    cursor: pointer;
+  }
+  .btn:active {
+    transform: scale(0.97);
+    transition-duration: 0.1s;
+  }
+  .chip {
+    transition:
+      border-color 0.4s var(--ease-out-expo),
+      background-color 0.4s var(--ease-out-expo);
+  }
+  .chip:hover {
+    border-color: rgb(236 233 226 / 0.3);
+    background: rgb(236 233 226 / 0.07);
   }
   .sr-only-focusable:not(:focus) {
     position: absolute;

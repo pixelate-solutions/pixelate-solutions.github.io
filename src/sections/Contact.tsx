@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { gsap, MQ, SplitText } from '../lib/gsap'
 import { useIsoLayoutEffect } from '../lib/hooks'
+import { drawRules } from '../lib/reveal'
 import { person } from '../content/site'
 import { scrollToTarget } from '../lib/smooth'
 import Magnetic from '../components/Magnetic'
@@ -16,6 +17,7 @@ export default function Contact() {
     if (!el) return
     const mm = gsap.matchMedia()
     mm.add(MQ.motion, () => {
+      drawRules(el)
       const split = SplitText.create(el.querySelector('[data-contact-title]'), { type: 'chars,words', charsClass: 'inline-block' })
       gsap.from(split.chars, { yPercent: 120, rotate: 8, stagger: 0.025, duration: 1.3, scrollTrigger: { trigger: el, start: 'top 65%', once: true } })
       gsap.from(el.querySelectorAll('[data-contact-in]'), { y: 30, opacity: 0, stagger: 0.08, duration: 1.1, scrollTrigger: { trigger: el, start: 'top 55%', once: true } })
@@ -35,26 +37,24 @@ export default function Contact() {
   }
 
   return (
-    <section ref={root} id="contact" tabIndex={-1} aria-labelledby="contact-title" className="relative overflow-hidden border-t border-white/10 pt-28 outline-none md:pt-40">
+    <section ref={root} id="contact" tabIndex={-1} aria-labelledby="contact-title" className="relative overflow-hidden pt-28 outline-none md:pt-44">
+      <span data-rule className="absolute inset-x-0 top-0 h-px origin-left bg-white/10" aria-hidden />
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         aria-hidden
-        style={{ background: 'radial-gradient(60% 50% at 20% 100%, rgb(92 225 230 / .10), transparent 70%), radial-gradient(60% 50% at 85% 90%, rgb(255 122 69 / .12), transparent 70%)' }}
+        style={{ background: 'radial-gradient(60% 50% at 20% 100%, rgb(159 189 211 / .10), transparent 70%), radial-gradient(60% 50% at 85% 90%, rgb(242 107 58 / .12), transparent 70%)' }}
       />
       <div className="container-x">
-        <p data-contact-in className="eyebrow mb-8 flex items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#7CF29A] [animation:pulse-dot_2s_ease-in-out_infinite]" /> (06) {person.availability}
-        </p>
         <h2 id="contact-title" data-contact-title className="display text-[clamp(3.6rem,13vw,14rem)] leading-[0.85]">
-          Let’s <span className="serif-i text-sell">talk</span>.
+          Say hello.
         </h2>
         <div className="mt-12 grid gap-12 md:mt-16 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <p data-contact-in className="max-w-[38rem] text-xl leading-relaxed text-bone/80 md:text-2xl">
-              Hiring a Solutions Engineer, Forward Deployed Engineer or Solutions Architect? I can take the discovery call and the deployment. Remote, US, Eastern time.
+            <p data-contact-in className="max-w-[30rem] text-xl leading-relaxed text-bone/80 md:text-2xl">
+              Email is best. I’m in Michigan, Eastern time.
             </p>
             <div data-contact-in className="mt-10 flex flex-wrap items-center gap-3">
-              <a href={`mailto:${person.email}`} className="group text-[clamp(1.4rem,3.4vw,2.6rem)] font-semibold tracking-[-0.03em] text-bone" data-cursor="Write">
+              <a href={`mailto:${person.email}`} className="group text-[clamp(1.4rem,3.4vw,2.6rem)] font-bold tracking-[-0.03em] text-bone" data-cursor="Write">
                 <span className="bg-[linear-gradient(currentColor,currentColor)] bg-[length:100%_2px] bg-left-bottom bg-no-repeat pb-1 transition-[background-size] duration-700 [transition-timing-function:var(--ease-out-expo)] group-hover:bg-[length:0%_2px]">
                   {person.email}
                 </span>
@@ -67,7 +67,7 @@ export default function Contact() {
           <div data-contact-in className="flex flex-wrap content-end gap-3 lg:col-span-5 lg:justify-end">
             <Magnetic>
               <a className="btn btn-primary" href={person.resume} target="_blank" rel="noopener" data-cursor="PDF">
-                <FileDown className="h-4 w-4" /> Download résumé
+                <FileDown className="h-4 w-4" /> Résumé
               </a>
             </Magnetic>
             <Magnetic>
@@ -84,21 +84,19 @@ export default function Contact() {
         </div>
       </div>
 
-      <Marquee
-        className="mt-24 border-y border-white/10 py-6 text-[clamp(2.4rem,6vw,5.5rem)] leading-none md:mt-32"
-        items={['An engineer who sells', 'a seller who ships', 'Discovery', 'Scoping', 'Prototype', 'Deploy', 'Expand']}
-      />
+      <Marquee className="mt-24 border-y border-white/10 py-6 text-[clamp(2.4rem,6vw,5.5rem)] leading-none md:mt-32" items={['An engineer who sells', 'A seller who ships']} />
 
-      <footer className="container-x flex flex-col gap-6 py-10 text-sm text-mute md:flex-row md:items-center md:justify-between">
-        <p>© {new Date().getFullYear()} Joseph A. Morrison · {person.location}</p>
-        <p className="font-mono text-xs text-dim">Built with Vite, React, GSAP, Lenis, Motion and three.js</p>
+      <footer className="container-x flex flex-col gap-4 py-10 text-sm text-mute md:flex-row md:items-center md:justify-between">
+        <p>
+          © {new Date().getFullYear()} Joseph A. Morrison · {person.location}
+        </p>
         <a
           href="#top"
           onClick={(e) => {
             e.preventDefault()
             scrollToTarget('#top')
           }}
-          className="eyebrow hover:text-bone"
+          className="text-sm font-medium text-mute transition-colors hover:text-bone"
         >
           Back to top ↑
         </a>

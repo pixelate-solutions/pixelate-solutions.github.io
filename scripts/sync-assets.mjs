@@ -33,6 +33,7 @@ const FORCE = process.argv.includes('--force')
 const SLUGS = [
   'metriqs',
   'connected-machine-platform',
+  'relay',
   'acquisition-radar',
   'link',
   'civic-records-ai',
@@ -42,6 +43,8 @@ const SLUGS = [
   'northstar',
 ]
 const IMG_EXT = /\.(png|jpe?g|webp)$/i
+/** Files never published, per slug. Relay console shots render private client code; awaiting the founder's OK. */
+const EXCLUDE = { relay: /^console-/i }
 
 const log = (...a) => console.log('[sync-assets]', ...a)
 const mkdirp = (p) => fs.mkdirSync(p, { recursive: true })
@@ -97,7 +100,7 @@ async function syncProject(slug) {
     if (fs.existsSync(outDir)) fs.rmSync(outDir, { recursive: true })
     return { images: [] }
   }
-  const files = fs.readdirSync(dir).filter((f) => IMG_EXT.test(f) && !f.startsWith('.')).sort()
+  const files = fs.readdirSync(dir).filter((f) => IMG_EXT.test(f) && !f.startsWith('.') && !EXCLUDE[slug]?.test(f)).sort()
   const captions = parseCaptions(dir, files)
   mkdirp(outDir)
   const keep = new Set()
@@ -132,8 +135,8 @@ async function syncProject(slug) {
  * so the hero can wipe between them (hoodie = engineer, suit = seller) without the face jumping.
  */
 const HEADSHOT_CROPS = {
-  casual: { left: 54, top: 40, width: 1032, height: 1290 },
-  suit: { left: 80, top: 0, width: 1000, height: 1250 },
+  casual: { left: 80, top: 70, width: 984, height: 1230 },
+  suit: { left: 92, top: 2, width: 984, height: 1230 },
 }
 
 async function syncHeadshots() {

@@ -4,7 +4,7 @@ import { useIsoLayoutEffect, useReducedMotion } from '../lib/hooks'
 import { hero, person } from '../content/site'
 import Portrait, { focusPortrait } from '../components/Portrait'
 import Magnetic from '../components/Magnetic'
-import { ArrowDown, FileDown, GitHub, LinkedIn, Mail } from '../components/Icons'
+import { GitHub, LinkedIn, Mail } from '../components/Icons'
 
 const SignalField = lazy(() => import('../components/SignalField'))
 
@@ -25,7 +25,6 @@ function useSignalField() {
 
 export default function Hero() {
   const root = useRef<HTMLElement>(null)
-  const roleRef = useRef<HTMLSpanElement>(null)
   const showField = useSignalField()
   const [inView, setInView] = useState(true)
 
@@ -53,16 +52,6 @@ export default function Hero() {
       gsap.to('[data-hero-row="b"]', { xPercent: 6, ease: 'none', scrollTrigger: { trigger: el, start: 'top top', end: 'bottom top', scrub: true } })
       gsap.to('[data-hero-portrait]', { yPercent: 12, scale: 0.94, ease: 'none', scrollTrigger: { trigger: el, start: 'top top', end: 'bottom top', scrub: true } })
       gsap.to('[data-hero-bg]', { opacity: 0.25, ease: 'none', scrollTrigger: { trigger: el, start: 'center top', end: 'bottom top', scrub: true } })
-
-      // rotating role, scrambled
-      let i = 0
-      const cycle = gsap.timeline({ repeat: -1, delay: 2.6 })
-      person.roles.forEach(() => {
-        cycle.call(() => {
-          i = (i + 1) % person.roles.length
-          gsap.to(roleRef.current, { duration: 1.1, scrambleText: { text: person.roles[i], chars: 'lowerCase', speed: 0.5 } })
-        }).to({}, { duration: 2.8 })
-      })
       return () => split.revert()
     })
     return () => mm.revert()
@@ -76,7 +65,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(50% 40% at 12% 30%, rgb(92 225 230 / .10), transparent 70%), radial-gradient(45% 40% at 18% 80%, rgb(255 122 69 / .10), transparent 70%), radial-gradient(40% 50% at 78% 55%, rgb(236 233 226 / .06), transparent 70%)',
+              'radial-gradient(50% 40% at 12% 30%, rgb(143 179 201 / .10), transparent 70%), radial-gradient(45% 40% at 18% 80%, rgb(242 107 58 / .10), transparent 70%), radial-gradient(40% 50% at 78% 55%, rgb(236 233 226 / .06), transparent 70%)',
           }}
         />
         {showField && (
@@ -91,16 +80,7 @@ export default function Hero() {
       </div>
 
       <div className="container-x flex flex-1 flex-col">
-        <div data-hero-fade className="eyebrow flex flex-wrap items-center gap-x-6 gap-y-2">
-          <span>{hero.eyebrow}</span>
-          <span className="hidden sm:inline">{person.location} · Remote (US)</span>
-          <span className="flex items-center gap-2 text-bone">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#7CF29A] [animation:pulse-dot_2s_ease-in-out_infinite]" />
-            Open to work
-          </span>
-        </div>
-
-        <div className="mt-8 grid flex-1 items-center gap-10 lg:mt-4 lg:grid-cols-12 lg:gap-8">
+        <div className="mt-6 grid flex-1 items-center gap-10 lg:mt-0 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7 xl:col-span-7">
             <p className="sr-only">Joseph Morrison.</p>
             <h1 className="display text-[clamp(3.1rem,7.6vw,8.75rem)]" aria-label="An engineer who sells. A seller who ships.">
@@ -110,11 +90,7 @@ export default function Hero() {
                 </span>
                 <span className="line-mask">
                   <span data-hero-line>who </span>
-                  <span
-                    className="serif-i cursor-default pr-[0.06em] text-sell"
-                    onPointerEnter={() => focusPortrait('sell')}
-                    onPointerLeave={() => focusPortrait(null)}
-                  >
+                  <span className="cursor-default text-sell" onPointerEnter={() => focusPortrait('sell')} onPointerLeave={() => focusPortrait(null)}>
                     <span data-hero-line>sells.</span>
                   </span>
                 </span>
@@ -125,33 +101,21 @@ export default function Hero() {
                 </span>
                 <span className="line-mask">
                   <span data-hero-line>who </span>
-                  <span
-                    className="serif-i cursor-default pr-[0.06em] text-build"
-                    onPointerEnter={() => focusPortrait('build')}
-                    onPointerLeave={() => focusPortrait(null)}
-                  >
+                  <span className="cursor-default text-build" onPointerEnter={() => focusPortrait('build')} onPointerLeave={() => focusPortrait(null)}>
                     <span data-hero-line>ships.</span>
                   </span>
                 </span>
               </span>
             </h1>
 
-            <div className="mt-8 grid gap-8 md:mt-10 md:grid-cols-[1fr_auto] md:items-end">
-              <p data-hero-fade className="max-w-[34rem] text-[1.05rem] leading-relaxed text-bone/80 md:text-lg">
-                <span className="text-bone">Joseph Morrison</span>, <span ref={roleRef} className="font-mono text-[0.92em] text-build">{person.roles[0]}</span>.{' '}
-                {hero.lede}
-              </p>
-            </div>
+            <p data-hero-fade className="mt-8 max-w-[32rem] text-[1.05rem] leading-relaxed text-bone/75 md:mt-10 md:text-lg">
+              {hero.lede}
+            </p>
 
             <div data-hero-fade className="mt-8 flex flex-wrap items-center gap-2 sm:gap-3">
               <Magnetic>
-                <a className="btn btn-primary" href={`mailto:${person.email}`} data-cursor="Say hi">
+                <a className="btn btn-primary" href={`mailto:${person.email}`} data-cursor="Email">
                   <Mail className="h-4 w-4" /> Email me
-                </a>
-              </Magnetic>
-              <Magnetic>
-                <a className="btn btn-ghost" href={person.resume} target="_blank" rel="noopener" data-cursor="PDF">
-                  <FileDown className="h-4 w-4" /> Résumé
                 </a>
               </Magnetic>
               <Magnetic strength={0.5}>
@@ -173,23 +137,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-        <div data-hero-fade className="flex items-end justify-between pb-6 pt-10 md:pb-8">
-          <a href="#numbers" className="eyebrow group flex items-center gap-3 hover:text-bone">
-            <span className="relative block h-10 w-px overflow-hidden bg-white/10">
-              <span className="absolute inset-0 bg-bone [animation:scroll-line_2.2s_var(--ease-in-out-quart)_infinite]" />
-            </span>
-            Scroll
-            <ArrowDown className="h-3.5 w-3.5 transition-transform group-hover:translate-y-0.5" />
-          </a>
-          <div className="eyebrow hidden items-center gap-3 md:flex">
-            <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-build" />Engineering</span>
-            <span className="h-px w-8 bg-white/20" />
-            <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-sell" />Sales</span>
-            <span className="h-px w-8 bg-white/20" />
-            <span className="text-bone">One signal</span>
-          </div>
-        </div>
+        <div className="h-10 md:h-14" />
       </div>
     </section>
   )

@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-11-02T05:00:53.355Z",
+  "generatedAt": "2026-11-02T06:01:03.901Z",
   "present": [
     "metriqs",
     "connected-machine-platform",
+    "relay",
     "acquisition-radar",
     "link",
     "civic-records-ai",
@@ -21,7 +22,7 @@
       ],
       "w": 1000,
       "h": 1250,
-      "lqip": "data:image/webp;base64,UklGRv4AAABXRUJQVlA4IPIAAABQBgCdASoYAB4APu1qq1EppaOiqAqpMB2JbACdL8CVhYTbdIanz7pfWaHI4Jd+LKfBl96rSMLoLTin4ADfhMhDmyYs8KFPURy2JmRjBwLOLe7js3KRXmjesb9JiwnTFF3KE2M0/wGQq3E9yNBe448O7nvI1PWZaMeSeDeYV3JQDdeb3TBGRFLJe5x+yz6QokpxkevLY51CAYJVI9ltWfD85WvwOF8O21cOOWU4njqxyhmodByFQCkYTC3IKsg1eA9y+UN6TLh0tLI1xT+cq6Z7k1M0UMskp6vPo8nG/m/DA66VnWIEpdSk6PTL5Avjr/AAAA=="
+      "lqip": "data:image/webp;base64,UklGRvQAAABXRUJQVlA4IOgAAADQBQCdASoYAB4APu1oqk+ppaOiKA1RMB2JbACsAYy8d1n7/aDZLVJ6p8q+OUmoDW4yeshymjQ6AN/ItFjg3H+vxn8K57zv2sYYjRgyqtR01xkBM5MZumw6C09JhRW7i+PsqDkknq8TZwhkO9et+pJDGDcRhkrAbakUi7gk8Vd9WHvdyG+ZQADg1s97bgW1njq+5zxUM1fuzPyAc0+VhUubc+FIhaATCwiH4heMwOTzz+W/3D+yis9QSdV3BVkFQBDalpfaOASIg0WmzY/LrneGnCtdunLLd7rgaQ4oPEnT73oip1KWH4AA"
     },
     "suit": {
       "base": "/img/headshot-suit",
@@ -31,7 +32,7 @@
       ],
       "w": 1000,
       "h": 1250,
-      "lqip": "data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAADwBQCdASoYAB4APuFUpU2opCOiN/qoARAcCWIAnTMhgzek6mM/owTMiGNBfmPL423ohzCIH9M8AAD+P3p/F/iIZmXPZ50FsX0bx2aQC/866VW4NOCv5l5D0idekkTwfQiKU9cKqadel1uzBD8urVH5PxDGIXiOHMx660qEEQmoxoHknZv7UqkI/K9SQuqeR2i+3r60Tts5PLrp125VYAREVG4ulqhbDcfqo4gXtD1AQkwKBD30Y2OusZJTgIT0+33gE+m7u2ImbcWsdoT4Abpj//AQHplLM1GhfjIA"
+      "lqip": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAACQBQCdASoYAB4APuVgpk2pJaOiMAwBIByJYgCdACFTVavsXNbO3ZTqvUymvx6dSQMBkRL1kAD+P4UOlrmGlkJj6aJlbJS5pbp7ss6P4BDL836I1olpeTQnF1gpQrFgG5ddYYWYcletslT8jHkHfy15dU37cBmodESPVPirkQj6kj+h/aQZyax/FyI4wNWjHnXs3ShEzGzxQ2SXP/LtoI1Q30Ehz8zrb27q0U2+lRTR7CsA5DS6jlD4A/44OWJ4G7r9SclELBzbu1a2RXZ7VNV/gpv3+nNHTmR9/P28AAA="
     }
   },
   "projects": {
@@ -108,6 +109,54 @@
           "kind": "desktop",
           "caption": "",
           "lqip": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAgCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAe/QAAP7wqgfzCrRcOI4XWAAA"
+        },
+        {
+          "base": "/img/work/metriqs/07-earlier-inbox",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZ2DrJQHD/gUItkjVxwAA/vCVOQxcaQpDZQ5PgLKm5CKzHQv5xh/Xemf8zSFg7S9DnQt1cZI8mlPqPXsYc+oDIfqAg8EcAAA="
+        },
+        {
+          "base": "/img/work/metriqs/08-earlier-goals",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JZwBTAAbhqlg44L1wAAD+8GVUT4LOMT3s61k1TKL2tT/bSOKii6VxgUqwrgAA"
+        },
+        {
+          "base": "/img/work/metriqs/09-earlier-budget",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZQAAUo95VVB8PAAA/vBsL4dkP4jQYuX1tAA0VAhhF2auAJD8AAAA"
+        },
+        {
+          "base": "/img/work/metriqs/10-earlier-luca-chat",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwAwCdASoYAA8ALrV2u12jqampiYC0SzAABSTc0uR2Jw9f3QAA/vdV71SwZoGL8OxYYuT5OsoxRh4pwMqKP3pJd1uEkyBCMV11NLAhv6lyzo6seaQ0vxF2schv9ZbzzN+H9RJGoruGUqwAAAA="
         }
       ]
     },
@@ -304,6 +353,106 @@
           "kind": "desktop",
           "caption": "Architecture. Idempotent ingest feeds a private per-machine realtime stream (≤10 Hz), plus durable state, snapshot, and event tables and a gzip NDJSON raw archive. A tool-calling AI agent uses hybrid retrieval over manuals, videos, and resolved tickets, triages tickets, and escalates to humans. (.html is the editable source.)",
           "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQBACdASoYABEAPu1wsFKppiSiqAgBMB2JZwC4qBEl5P5LKLJe//gLQAD+7sNGGWTfIoQT7mmmwK18TCmoqqxWOoArp8K8JS++c4mPsXcFloQAAAA="
+        }
+      ]
+    },
+    "relay": {
+      "images": [
+        {
+          "base": "/img/work/relay/site-01-home",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "relayapp.im home: \"All your agents in one app,\" the messenger for AI agents.",
+          "lqip": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAADwBACdASoYAA8APu1iqk2ppaQiMAgBMB2JbACdMoR4TsA/EBRgAQbxIzrZqwB6ToAA/rq6Ntob/qgJSoKfix8vutI9Evvd7CUl/PUFxvsnMN87ANHv1/MT4st9ZZR/m4pRvKG/+ywmy0b8fw979Fvyah/38wkv/+jQpEzuELe2ormJr9dRPmpvu0w6Y/cQKSk9l7lI2fGaOqSgguHUUq64aku/tgMelY3f129jwCR/8eazKxzHe4AA"
+        },
+        {
+          "base": "/img/work/relay/site-02-business",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "relayapp.im business page: the console beside the iPhone chat a customer sees.",
+          "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABQAwCdASoYAA8APu1iqk4ppaQiMAgBMB2JZwBUfoohCArIAAD+8KxBcz8NcNIxZoe3S/em7DV0Yq+clHm8perkosNnmJfAl/JmMWNaUOCMFxbnSnn3YBQfQAA="
+        },
+        {
+          "base": "/img/work/relay/site-03-developers",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "relayapp.im developers page: npx relaymessenger agents create next to a live agent chat.",
+          "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JZwAAW9ZwWEeeayWAAP7ynfnXWGSWVg/K6Eh9S7p7hF6voPJ0rAKdo6c++IE6Jd+ZLE4GrRPWQIZVgxTwrDp4CQAAAA=="
+        },
+        {
+          "base": "/img/work/relay/site-04-agents",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "relayapp.im agents page: \"Join the internet of agents.\"",
+          "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAW7yI5OhZK/JBgAAA/vKd+/ocsEBloR2EA1O7s4gSvH5UnZdDYA2z8k1X82AMB2hIev3fOwRGsPhUGrbigAA="
+        },
+        {
+          "base": "/img/work/relay/site-05-docs",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "docs.relayapp.im home: guides, CLI, webhook events, API reference, and coding-agent integrations.",
+          "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZ2bvWmSU/70NgAD+8Kp/8a37+Wh9W2WhZrG9VQRYknNEQaYVFybAkgAAAA=="
+        },
+        {
+          "base": "/img/work/relay/site-06-docs-quickstart",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Docs Quickstart: connect a runtime and send a first message in three steps.",
+          "lqip": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAe/QAAP7wpwx4T+ZrZsjgGSiLfdXBHnTXxhNAAA=="
+        },
+        {
+          "base": "/img/work/relay/site-07-docs-buttons",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Docs Buttons page (an interactive message part I shipped end to end), with its in-browser tappable preview.",
+          "lqip": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAethALfgAAP7wqOYsHRXjJBOV51pXgMrRAAA="
+        },
+        {
+          "base": "/img/work/relay/site-08-docs-selection",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Docs Selection page (an interactive part I shipped end to end), with the multi-select sheet preview open and ready to Send.",
+          "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoYAA8APu1kq04ppaQiMAgBMB2JZwDKACHftmfobf4g4gAA/vHRf+F0o5eWf+Gtmoiui/4IYxda1NDz9IIqM5jM2DWtKnbxUgFdRt6ESPbgAAAA"
         }
       ]
     },

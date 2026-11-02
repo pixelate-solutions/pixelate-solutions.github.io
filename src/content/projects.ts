@@ -1,5 +1,6 @@
 /**
- * Case studies. Facts come from career/audit/local-projects.md and career/audit/github-repos.md.
+ * Case studies. Facts come from career/audit/local-projects.md, career/audit/github-repos.md,
+ * career/audit/relay.md and career/audit/macbook-extras.md.
  * Confidentiality: the connected-machine client is never named; private repos are never linked;
  * no Electro-Matic pricing appears anywhere.
  *
@@ -8,24 +9,25 @@
  */
 import manifest from './assets.generated.json'
 
-export type Outcome = { value: string; label: string }
 export type ProjectLink = { label: string; href: string }
 
 export type Project = {
   slug: string
   name: string
+  /** 2–4 words, sentence case */
   kicker: string
   client?: string
+  /** ≤ 6 words */
   role: string
   period: string
-  tagline: string
-  problem: string
-  built: string[]
-  note?: string
-  flow: string[]
+  /** one line, ≤ 90 characters: what it is */
+  summary: string
+  /** exactly three: the problem, what I built, the result. Each ≤ 150 characters. */
+  points: [string, string, string]
+  /** ≤ 8 chips */
   stack: string[]
-  outcomes: Outcome[]
   links: ProjectLink[]
+  /** ≤ 90 characters */
   privacy?: string
   /** two-stop gradient used for the card glow and the generated placeholder */
   palette: [string, string]
@@ -33,6 +35,7 @@ export type Project = {
   span: number
   /** substring of the screenshot file name to use as the cover (defaults to the first desktop shot) */
   cover?: string
+  /** ≤ 3, each ≤ 14 characters */
   tags: string[]
 }
 
@@ -50,32 +53,19 @@ export const projects: Project[] = [
   {
     slug: 'metriqs',
     name: 'MetrIQs',
-    kicker: 'Flagship · Founder-built',
+    kicker: 'Founder-built',
     role: 'Founder, product and engineering',
     period: '2024 – now',
-    tagline: 'Profit and KPI intelligence for multi-location restaurants, now queried through the customer’s own AI.',
-    problem:
-      'Owners of small multi-location businesses run on a POS, accounting, payroll and a bank, and none of them agree. Nobody can tell the owner where margin is leaking this week, or why.',
-    built: [
-      'Native adapters for 9 systems (Toast, Square, Clover, Shopify, QuickBooks, Xero, 7shifts, Plaid, Stripe) plus the Composio catalog, normalized into one daily-metrics store.',
-      'A backtested forecasting engine that picks between seasonal-median models by MAPE on each business’s own last 28 days, with p10–p90 bands derived from the method’s real errors.',
-      'An MCP server with 22 tools over OAuth, so Claude, ChatGPT and Cursor can query a client’s data, compare to peers and build reports. Code does the math; the model never computes a number.',
-      'An automated Profit Leak Report: 36 months of deterministic analysis, a graded rubric, and a one-page PDF rendered in the client’s own logo, colors and fonts.',
-      'Anomaly alerts over SMS and email, and AES-256-GCM credential encryption with key rotation.',
+    summary: 'Profit and KPI intelligence for multi-location restaurants, queried through your own AI.',
+    points: [
+      'Multi-location owners run on a POS, accounting, payroll and a bank that never agree, so nobody can say where margin is leaking.',
+      'I built it end to end: 9 integrations, backtested forecasts, a 22-tool MCP server, plus an earlier Python FastAPI multi-agent analyst and Expo app.',
+      '~132k lines of TypeScript at peak, 889 tests today, and Claude, ChatGPT or Cursor query a client’s data through 22 MCP tools.',
     ],
-    note:
-      'Earlier versions included an in-app AI analyst on OpenAI and Anthropic, a Python FastAPI service and Stripe billing. In October 2026 I consolidated everything into one TypeScript service and cut ~76k lines.',
-    flow: ['POS · accounting · payroll · bank', 'Provider adapters', 'PostgreSQL daily metrics', 'Forecasts · anomalies · leaks', 'MCP server · 22 tools', 'Claude · ChatGPT · Cursor'],
-    stack: ['TypeScript', 'Next.js 15', 'Hono', 'Zod', 'Drizzle', 'PostgreSQL 17', 'Clerk OAuth', 'MCP SDK', 'Twilio', 'Resend', 'AWS S3', 'pdfkit', 'Render', 'GitHub Actions'],
-    outcomes: [
-      { value: '~100k', label: 'lines of TypeScript' },
-      { value: '889', label: 'automated tests, 0 failing' },
-      { value: '135', label: 'guarded SQL migrations' },
-      { value: '22', label: 'MCP tools' },
-    ],
+    stack: ['TypeScript', 'Next.js 15', 'Hono', 'Drizzle', 'PostgreSQL 17', 'Clerk OAuth', 'MCP SDK', 'Expo'],
     links: [],
     privacy: 'Private repository. Screens use demo data with fictional businesses.',
-    palette: ['#5CE1E6', '#FF7A45'],
+    palette: ['#9FBDD3', '#F26B3A'],
     cover: '01-profit-leak-report',
     span: 7,
     tags: ['MCP', 'Forecasting', '9 integrations'],
@@ -83,232 +73,181 @@ export const projects: Project[] = [
   {
     slug: 'connected-machine-platform',
     name: 'Connected-Machine Platform',
-    kicker: 'Client work · Industrial',
+    kicker: 'Client work',
     client: 'An industrial laser-marking machine manufacturer',
     role: 'Lead engineer, via Pixelate Solutions',
     period: 'Jun – Oct 2026',
-    tagline: 'Live machine telemetry, AI-assisted support and fleet admin for a machine manufacturer. iOS, Android and web.',
-    problem:
-      'The manufacturer’s customers had no window into their machines, and support ran on email and memory. They needed one product for customers and staff, on phones and the web, in months, not years.',
-    built: [
-      'An Expo / React Native app for iOS and Android: machines, live telemetry (amperage, voltage, vibration, temperature, laser state), support tickets with chat, documents and videos. Released through TestFlight and Google Play.',
-      'A 217-route Node/Express API and a 31-page Next.js staff admin for tickets, fleet, warranties, customers and billing, on Supabase Postgres with row-level security.',
-      'Re-architected telemetry after a production incident (3.7M-row table, statement timeouts, 1-second polling): idempotent ingest, per-machine realtime broadcast capped at 10 Hz, change-only event storage, gzip NDJSON archives.',
-      'An AI support agent on OpenAI with retrieval over manuals, videos and past tickets. It triages new tickets and escalates to people.',
-      'CRM sync with Pipedrive, Stripe billing for premium telemetry, Firebase push, and an outbound-only GPU worker so customers can train vision models on the client’s on-prem server with no inbound ports.',
+    summary: 'Live telemetry, AI support and fleet admin for a machine maker, on iOS, Android and web.',
+    points: [
+      'Customers had no window into their machines, support ran on email and memory, and the manufacturer needed one product within months.',
+      'I led the build: an Expo app for iOS and Android, a Node API and Next.js staff admin, an AI support agent, and a ~3,800-ticket data migration.',
+      '217 routes in production, telemetry rebuilt to a 10 Hz cap after a 3.7M-row incident, and 1,900 machines reconciled against ~7,900 CRM deals.',
     ],
-    flow: ['Machine controller', 'Ingest API · idempotent', 'Realtime broadcast ≤ 10 Hz', 'State · events · archives', 'iOS · Android · staff web'],
-    stack: ['Expo', 'React Native', 'TypeScript', 'Node.js', 'Express 5', 'Supabase', 'Postgres RLS', 'Realtime', 'OpenAI', 'Stripe', 'Pipedrive', 'Firebase', 'Next.js 16', 'Railway', 'Vercel', 'Playwright'],
-    outcomes: [
-      { value: '217', label: 'API routes in production' },
-      { value: '~130k', label: 'lines of code' },
-      { value: '370', label: 'commits in under 4 months' },
-      { value: '156', label: 'test files across app, API, web' },
-    ],
+    stack: ['Expo', 'React Native', 'TypeScript', 'Node.js', 'Supabase', 'Postgres RLS', 'OpenAI', 'Next.js 16'],
     links: [],
     privacy: 'Client name withheld. Private repositories; screens are anonymized demo data.',
-    palette: ['#FF7A45', '#FFC46B'],
+    palette: ['#F26B3A', '#E8B97A'],
     span: 5,
     tags: ['IIoT', 'Realtime', 'iOS + Android'],
   },
   {
+    slug: 'relay',
+    name: 'Relay',
+    kicker: 'Client work',
+    client: 'Relay (relayapp.im), the messenger for AI agents',
+    role: 'Contract engineer, via Pixelate Solutions',
+    period: 'Aug – Sep 2026',
+    summary: 'A messenger where AI agents are contacts people text like friends.',
+    points: [
+      'Businesses needed a console to launch and run agents, and agents needed richer replies than text, identical across every runtime.',
+      'I co-built the business console with the founder and shipped buttons, multi-select and Stripe invoices across the API, SDK, docs and iOS.',
+      'Second-largest console contributor at 238 commits, with 3 interactive message types live across 7 agent runtimes, the docs and the iOS app.',
+    ],
+    stack: ['TypeScript', 'React 19', 'TanStack Start', 'Hono', 'Cloudflare Workers', 'OpenAPI', 'Mintlify', 'Swift / UIKit'],
+    links: [
+      { label: 'relayapp.im', href: 'https://relayapp.im' },
+      { label: 'Developer docs', href: 'https://docs.relayapp.im' },
+      { label: 'Buttons guide', href: 'https://docs.relayapp.im/interactions/buttons' },
+      { label: 'Selection guide', href: 'https://docs.relayapp.im/interactions/selection' },
+    ],
+    privacy: 'Public product. Screens show the site and docs. Console screens await the founder’s OK.',
+    palette: ['#7FA6D9', '#B8B3D6'],
+    cover: 'site-07-docs-buttons',
+    span: 7,
+    tags: ['SDK', 'Developer docs', '7 runtimes'],
+  },
+  {
     slug: 'acquisition-radar',
     name: 'Acquisition Radar',
-    kicker: 'Private build · M&A intelligence',
+    kicker: 'Private build',
     role: 'Designer and engineer',
     period: 'Oct 2026',
-    tagline: 'Deal sourcing and underwriting for a two-partner team searching to buy a Michigan business.',
-    problem:
-      'Searchers buying a small business drown in broker emails, CIMs and noise. They need a system that watches public signals, scores targets against their criteria, and only spends AI money on what is promising.',
-    built: [
-      'Scheduled ingestion of Michigan WARN notices, 21 FRED economic series, forwarded broker emails and uploaded CIMs, PDFs and CSVs into an append-only history.',
-      'Explainable rules-based scoring, deal underwriting (financing assumptions, replacement-manager cost) and market-timing classification.',
-      'Guarded LLM use across Anthropic and OpenAI: schema-validated JSON only, no tool access, prompt-injection guards, cached by input hash, under a monthly budget. With no key it falls back to rules.',
-      'pg-boss workers on 10 cron schedules with retries and a dead-letter queue, feeding daily, weekly and monthly briefings to an in-app inbox.',
+    summary: 'Deal sourcing and underwriting for a two-partner team buying a Michigan business.',
+    points: [
+      'Searchers drown in broker emails and CIMs, and need a system that scores targets and only spends AI money on promising ones.',
+      'I built scheduled ingestion of WARN notices, 21 FRED series, broker email and CIMs, with rules-based scoring, underwriting and guarded LLM memos.',
+      'pg-boss workers on 10 cron schedules feed daily, weekly and monthly briefings, and it went from empty repo to tested build in 2 days.',
     ],
-    flow: ['WARN · FRED · broker email · CIMs', 'pg-boss workers', 'PostgreSQL · 45 tables', 'Rules scoring + underwriting', 'Guarded AI memos', 'Alerts & briefings'],
-    stack: ['TypeScript', 'Next.js 16', 'React 19', 'PostgreSQL 17', 'Drizzle', 'pg-boss', 'Anthropic SDK', 'OpenAI SDK', 'Docker', 'Vitest'],
-    outcomes: [
-      { value: '21', label: 'FRED series on a schedule' },
-      { value: '10', label: 'cron schedules, DLQ' },
-      { value: '45', label: 'tables' },
-      { value: '2 days', label: 'from empty repo to tested build' },
-    ],
+    stack: ['TypeScript', 'Next.js 16', 'PostgreSQL 17', 'Drizzle', 'pg-boss', 'Anthropic SDK', 'OpenAI SDK', 'Docker'],
     links: [],
     privacy: 'Private repository. Screens use the demo database only.',
-    palette: ['#9B8CFF', '#5CE1E6'],
+    palette: ['#B8B3D6', '#9FBDD3'],
     cover: '03-deal-radar',
-    span: 4,
+    span: 5,
     tags: ['Workers', 'Guarded AI', 'Public data'],
   },
   {
     slug: 'link',
     name: 'Link',
-    kicker: 'Open source · Personal finance',
+    kicker: 'Open source',
     role: 'Solo build',
     period: '2024 – 2026',
-    tagline: 'Bank-connected personal finance that turns a plain-language goal into a plan, with an API and MCP server for your own AI.',
-    problem:
-      'Budgeting apps miscategorize, then make you fix it. And your own financial data is locked away from the AI tools you already use.',
-    built: [
-      'Plaid bank connections with a sync pipeline into Postgres.',
-      'Two-stage categorization: deterministic rules first, then LLM classification behind a 0.8 confidence gate.',
-      'Plain-language goals turned into projected plans, computed on integer-money engines.',
-      'A read-only REST API with personal tokens, and an MCP server so AI agents can query your finances.',
+    summary: 'Bank-connected personal finance that turns a plain-language goal into a plan.',
+    points: [
+      'Budgeting apps miscategorize and make you fix it, and your own financial data is locked away from the AI tools you already use.',
+      'I built Plaid sync into Postgres, rules-first categorization with an LLM behind a 0.8 confidence gate, and goals turned into projected plans.',
+      '437 commits and a ground-up Link 2.0 rebuild in October 2026, with a read-only REST API and MCP server so your AI agents can query your finances.',
     ],
-    note: 'First commit August 2024; rebuilt from the ground up in October 2026 as Link 2.0.',
-    flow: ['Plaid', 'Sync pipeline', 'Rules → LLM (≥ 0.8)', 'Integer-money engines', 'UI · REST · MCP'],
-    stack: ['Next.js 16', 'React 19', 'TypeScript', 'Drizzle', 'Postgres', 'Plaid', 'Clerk', 'OpenAI', 'MCP', 'Tailwind v4', 'Vitest', 'Playwright'],
-    outcomes: [
-      { value: '437', label: 'commits' },
-      { value: '0.8', label: 'confidence gate before AI labels' },
-      { value: 'MCP', label: 'server for your own agents' },
-    ],
+    stack: ['Next.js 16', 'TypeScript', 'Drizzle', 'Postgres', 'Plaid', 'Clerk', 'OpenAI', 'MCP'],
     links: [{ label: 'GitHub', href: 'https://github.com/pixelate-solutions/link' }],
-    palette: ['#5CE1E6', '#7CF29A'],
+    palette: ['#9FBDD3', '#A9C9B5'],
     span: 4,
     tags: ['Plaid', 'MCP', 'Open source'],
   },
   {
     slug: 'civic-records-ai',
     name: 'Civic Records AI',
-    kicker: 'Open source · Public-sector AI',
+    kicker: 'Open source',
     role: 'Solo build',
     period: '2026',
-    tagline: 'Document intelligence for municipal records: cited answers, version diffs, a knowledge graph. Runs fully offline.',
-    problem:
+    summary: 'Document intelligence for municipal records that runs fully offline.',
+    points: [
       'Municipal and public-safety teams sit on decades of PDFs they cannot search, and policy often forbids sending them to a cloud model.',
-    built: [
-      'OCR ingestion with PyMuPDF and Tesseract into a ChromaDB vector store.',
-      'Questions answered with page-level citations and inline PDF previews.',
-      'Document version comparison and a 3D knowledge graph of extracted entities.',
-      'Local models through Ollama, so the whole system can run air-gapped.',
+      'I built OCR ingestion into ChromaDB, answers with page-level citations, version diffs and a 3D knowledge graph, all on local models via Ollama.',
+      'It runs air-gapped on synthetic data, and is the public concept for an on-prem records system being scoped for a municipal fire department.',
     ],
-    note:
-      'The public concept behind an on-prem records system I am scoping for a municipal fire department: a local database and self-hosted AI on the department’s own GPUs. Ships with synthetic data for the fictional City of Rivergate.',
-    flow: ['Scanned PDFs', 'OCR + chunking', 'ChromaDB', 'FastAPI', 'Ollama · local LLM', 'Cited answers'],
-    stack: ['Python', 'FastAPI', 'ChromaDB', 'PyMuPDF', 'Tesseract', 'Ollama', 'React', 'pdf.js', 'three.js'],
-    outcomes: [
-      { value: 'Offline', label: 'air-gap capable' },
-      { value: 'Page', label: 'level citations' },
-      { value: '3D', label: 'entity knowledge graph' },
-    ],
+    stack: ['Python', 'FastAPI', 'ChromaDB', 'PyMuPDF', 'Tesseract', 'Ollama', 'React', 'three.js'],
     links: [{ label: 'GitHub', href: 'https://github.com/pixelate-solutions/civic-records-ai' }],
-    palette: ['#7CA8FF', '#5CE1E6'],
+    palette: ['#9FBDD3', '#9FBDD3'],
     span: 4,
     tags: ['RAG', 'On-prem', 'OCR'],
   },
   {
     slug: 'pdu-configurator',
     name: 'PDU Configurator',
-    kicker: 'Built in my sales job · Quoting',
+    kicker: 'Built at Electro-Matic',
     role: 'Account manager who wrote the software',
     period: 'Electro-Matic',
-    tagline: 'A rules-driven configurator that lets reps configure and quote power distribution equipment themselves.',
-    problem:
-      'Quoting panels and PDUs meant hand-checking slot capacity and part nomenclature, then waiting on engineering for a drawing. Slow for the rep, slower for the customer.',
-    built: [
-      'Guided configuration of panelboards, weld and control power distribution panels, PDUs and remote power panels.',
-      'Product rules encoded as code: slot capacity, nomenclature, valid combinations.',
-      'Live panel drawings, a CSV bill of materials, PNG drawing export and a print-ready PDF quote sheet.',
-      'An admin catalog editor so the product list stays current without a developer.',
+    summary: 'A rules-driven configurator so reps can quote power distribution equipment themselves.',
+    points: [
+      'Quoting panels and PDUs meant hand-checking slot capacity and part nomenclature, then waiting on engineering for a drawing.',
+      'I encoded the product rules as code and built guided configuration for 4 product families with live panel drawings and an admin catalog editor.',
+      'One form now produces the drawing, a CSV bill of materials and a print-ready PDF quote sheet, and it is in use on the sales desk.',
     ],
-    flow: ['Rep enters requirements', 'Rule engine · slots · nomenclature', 'Live panel drawing', 'BOM + PDF quote'],
     stack: ['Next.js 16', 'React 19', 'TypeScript', 'Zod', 'Drizzle', 'Postgres', 'Tailwind v4', 'Vercel'],
-    outcomes: [
-      { value: '4', label: 'product families' },
-      { value: '1', label: 'form to drawing, BOM and quote' },
-      { value: 'In use', label: 'on the sales desk' },
-    ],
     links: [],
     privacy: 'Private repository. Pricing, cost and margin data are never shown.',
-    palette: ['#FF7A45', '#FF4D6D'],
+    palette: ['#F26B3A', '#E07A5F'],
     cover: '01-pdu-step-power',
-    span: 5,
+    span: 4,
     tags: ['Rules engine', 'CPQ', 'Sales tooling'],
   },
   {
     slug: 'marlow',
     name: 'Marlow',
-    kicker: 'Open source · Sales tech',
+    kicker: 'Open source',
     role: 'Solo build',
     period: 'Jul 2026',
-    tagline: 'An AI outbound agent that does the research and the drafting, and cannot send a thing without your approval.',
-    problem:
-      'Outbound tools either spray generic email or need hours of research per lead. The fix is an agent that does the work but keeps a human on the send button.',
-    built: [
-      'Describe your company, offer and market in chat; the agent builds a campaign profile.',
-      'Finds leads through Apollo’s remote MCP server, researches each one, and drafts emails into a review queue.',
-      'Sending requires an explicit, hash-checked approval. The model has no path to send on its own.',
-      'Gmail and Microsoft sending, with 7-day follow-up detection.',
+    summary: 'An AI outbound agent that researches and drafts, and cannot send without your approval.',
+    points: [
+      'Outbound tools either spray generic email or need hours of research per lead, and nobody wants a model on the send button.',
+      'I built a chat brief that becomes a campaign profile, lead finding through Apollo’s MCP server, per-lead research, and drafts into a review queue.',
+      'Sending requires an explicit hash-checked approval, so nothing goes out on its own, over Gmail and Microsoft with 7-day follow-up detection.',
     ],
-    flow: ['Chat brief', 'Campaign profile', 'Apollo MCP → leads', 'Research + drafts', 'Human approval · hash-checked', 'Gmail · Microsoft'],
-    stack: ['TypeScript', 'pnpm', 'Turborepo', 'Next.js', 'Postgres job worker', 'Supabase', 'OpenAI', 'MCP client', 'Zod', 'Vitest', 'Playwright', 'Railway'],
-    outcomes: [
-      { value: '40', label: 'test files' },
-      { value: '3 days', label: 'to a working monorepo' },
-      { value: '0', label: 'sends without approval' },
-    ],
+    stack: ['TypeScript', 'Turborepo', 'Next.js', 'Supabase', 'OpenAI', 'MCP client', 'Zod', 'Railway'],
     links: [{ label: 'GitHub', href: 'https://github.com/pixelate-solutions/Marlow' }],
-    palette: ['#FFC46B', '#FF7A45'],
-    span: 7,
+    palette: ['#E8B97A', '#F26B3A'],
+    span: 4,
     tags: ['Agents', 'MCP client', 'Approval gates'],
   },
   {
     slug: 'meminios',
     name: 'MeminiOS',
-    kicker: 'Open source · Enterprise AI',
+    kicker: 'Open source',
     role: 'Solo build',
     period: '2026',
-    tagline: 'A permissions-aware company brain: cited answers, proactive signals and governed skills for AI agents.',
-    problem:
-      'Company knowledge is scattered across tools, and most “chat with your docs” products ignore who is allowed to see what.',
-    built: [
-      'Ask: cited answers with an evidence rail, filtered by what the asker is allowed to see.',
-      'Brief: proactive signals, plus an entity map across sources.',
-      'Governed skills AI agents can use, exposed over REST and as MCP tools (brain_search, brain_answer and more).',
-      'Ingest, enrich and signal workers behind a model-router abstraction.',
+    summary: 'A permissions-aware company brain with cited answers and governed skills for AI agents.',
+    points: [
+      'Company knowledge is scattered across tools, and most chat-with-your-docs products ignore who is allowed to see what.',
+      'I built cited answers filtered by the asker’s permissions, proactive signals with an entity map, and ingest workers behind a model router.',
+      'Governed skills such as brain_search and brain_answer are exposed over REST and as MCP tools, served by Hono on Cloudflare Workers at the edge.',
     ],
-    flow: ['Company sources', 'Ingest · enrich workers', 'Postgres', 'Permission-filtered retrieval', 'REST + MCP tools'],
-    stack: ['TypeScript', 'pnpm', 'Turborepo', 'Hono', 'Cloudflare Workers', 'Next.js', 'Postgres', 'Drizzle', 'MCP', 'Vitest', 'GitHub Actions', 'Docker Compose'],
-    outcomes: [
-      { value: 'MCP', label: 'tools for agents' },
-      { value: 'RBAC', label: 'aware retrieval' },
-      { value: 'Edge', label: 'Hono on Cloudflare Workers' },
-    ],
+    stack: ['TypeScript', 'Turborepo', 'Hono', 'Cloudflare Workers', 'Next.js', 'Postgres', 'Drizzle', 'MCP'],
     links: [{ label: 'GitHub', href: 'https://github.com/pixelate-solutions/MeminiOS' }],
-    palette: ['#9B8CFF', '#FF7A45'],
-    span: 6,
+    palette: ['#B8B3D6', '#F26B3A'],
+    span: 4,
     tags: ['RAG', 'Permissions', 'MCP'],
   },
   {
     slug: 'northstar',
     name: 'Northstar',
-    kicker: 'Live product · Consumer AI',
+    kicker: 'Live product',
     role: 'Solo build',
     period: 'Live',
-    tagline: 'A free AI trip planner: every day of a trip on one map, and an assistant that edits the plan, with undo.',
-    problem: 'Trip planning lives in tabs, notes and group chats. Most AI planners hand you an itinerary you cannot really edit.',
-    built: [
-      'Every day of a trip on one map, with drag-and-drop reordering.',
-      'An AI assistant that edits the plan through tool calls as reversible operations, so every change can be undone.',
-      'A native SwiftUI + MapKit iPhone app on the same JSON API and Clerk accounts as the web app.',
-      'Grew out of an earlier Flutter app with a Fastify agent server.',
+    summary: 'A free AI trip planner: every day on one map, and an assistant that edits the plan.',
+    points: [
+      'Trip planning lives in tabs, notes and group chats, and most AI planners hand you an itinerary you cannot really edit.',
+      'I built the web app with drag-and-drop days on one map, an AI assistant that edits through tool calls, and a SwiftUI iPhone app on the same API.',
+      'Every AI edit is a reversible operation with undo, and the product is live at northstartravelguide.com with web and native iOS on one JSON API.',
     ],
-    flow: ['Web · Next.js', 'iPhone · SwiftUI', 'Shared JSON API', 'Tool calls → reversible edits', 'Neon Postgres'],
-    stack: ['Next.js 16', 'React', 'TypeScript', 'Drizzle', 'Neon Postgres', 'Clerk', 'OpenAI', 'Leaflet', 'dnd-kit', 'Vercel Blob', 'SwiftUI', 'MapKit', 'Playwright'],
-    outcomes: [
-      { value: 'Live', label: 'northstartravelguide.com' },
-      { value: '2', label: 'clients, one API: web + native iOS' },
-      { value: 'Undo', label: 'on every AI edit' },
-    ],
+    stack: ['Next.js 16', 'TypeScript', 'Drizzle', 'Neon Postgres', 'Clerk', 'OpenAI', 'SwiftUI', 'MapKit'],
     links: [
       { label: 'Live site', href: 'https://northstartravelguide.com' },
       { label: 'GitHub', href: 'https://github.com/pixelate-solutions/northstar-web' },
     ],
-    palette: ['#7CA8FF', '#FFC46B'],
+    palette: ['#9FBDD3', '#E8B97A'],
     cover: '02-trip-map',
-    span: 6,
+    span: 4,
     tags: ['Consumer', 'SwiftUI', 'Tool calling'],
   },
 ]

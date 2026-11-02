@@ -1,12 +1,11 @@
 /**
  * Generated placeholder for a project with no screenshots yet: on-brand gradient mesh,
- * blueprint grid, the project's architecture flow as a faint diagram, and the wordmark.
+ * blueprint grid and the wordmark.
  */
 import type { Project } from '../content/projects'
 
 export default function Placeholder({ project, compact = false }: { project: Project; compact?: boolean }) {
   const [a, b] = project.palette
-  const steps = project.flow.slice(0, 5)
   return (
     <div className="relative h-full w-full overflow-hidden bg-ink-2" aria-hidden>
       <div
@@ -24,18 +23,6 @@ export default function Placeholder({ project, compact = false }: { project: Pro
           maskImage: 'radial-gradient(80% 80% at 50% 50%, black, transparent)',
         }}
       />
-      {!compact && (
-        <div className="absolute inset-x-[8%] bottom-[12%] flex items-center gap-2 opacity-70">
-          {steps.map((s, i) => (
-            <div key={s} className="flex min-w-0 flex-1 items-center gap-2">
-              <span className="truncate rounded-full border border-white/15 bg-black/25 px-2 py-1 font-mono text-[9px] text-bone/80 backdrop-blur-sm">
-                {s}
-              </span>
-              {i < steps.length - 1 && <span className="h-px w-3 shrink-0 bg-white/30" />}
-            </div>
-          ))}
-        </div>
-      )}
       <div className="absolute inset-0 grid place-items-center">
         <span
           className="display select-none text-center text-bone/95"
@@ -44,9 +31,7 @@ export default function Placeholder({ project, compact = false }: { project: Pro
           {project.name}
         </span>
       </div>
-      <span className="absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.16em] text-bone/60">
-        {project.kicker}
-      </span>
+      <span className="absolute left-4 top-4 text-[12px] font-medium text-bone/60">{project.kicker}</span>
     </div>
   )
 }

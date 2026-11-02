@@ -29,8 +29,8 @@ export default function Marquee({ items, className = '' }: { items: string[]; cl
     <div key={k} className="flex shrink-0 items-center" aria-hidden={k === 'b'}>
       {items.map((t, i) => (
         <span key={i} className="flex items-center">
-          <span className={i % 2 ? 'serif-i text-bone/90' : 'display text-outline'}>{t}</span>
-          <span className="mx-[0.4em] text-[0.4em] text-sell">✦</span>
+          <span className={i % 2 ? 'display text-bone/90' : 'display text-outline'}>{t}</span>
+          <span className="mx-[0.5em] h-[0.18em] w-[0.18em] rounded-full bg-sell" />
         </span>
       ))}
     </div>

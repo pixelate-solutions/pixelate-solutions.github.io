@@ -14,12 +14,10 @@ const spanClass: Record<number, string> = {
 
 export default function ProjectCard({
   project,
-  index,
   onOpen,
   linkRef,
 }: {
   project: Project
-  index: number
   onOpen: (slug: string) => void
   linkRef: (el: HTMLAnchorElement | null) => void
 }) {
@@ -76,7 +74,7 @@ export default function ProjectCard({
 
   return (
     <article ref={card} data-work-card className={`group col-span-12 ${spanClass[project.span] ?? 'lg:col-span-6'} ${project.span === 4 ? 'md:col-span-6' : ''}`}>
-      <a ref={linkRef} href={`#/work/${project.slug}`} onClick={open} className="block rounded-[1.5rem] outline-none" data-cursor="Open">
+      <a ref={linkRef} href={`#/work/${project.slug}`} onClick={open} className="relative block rounded-[1.5rem] outline-none" data-cursor="Open">
         <div data-reveal className="[clip-path:inset(0_0_0_0_round_1.5rem)]">
           <div ref={tilt} className="will-change-transform [transform-style:preserve-3d]">
             <motion.div
@@ -90,34 +88,29 @@ export default function ProjectCard({
                 </div>
               </div>
               <div ref={glare} className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500" />
-              <div className="pointer-events-none absolute inset-0 rounded-[1.5rem] ring-1 ring-inset ring-white/5" />
+              <div className="pointer-events-none absolute inset-0 rounded-[1.5rem] ring-1 ring-inset ring-white/5 transition-[box-shadow] duration-700 [transition-timing-function:var(--ease-out-expo)] group-hover:shadow-[inset_0_0_0_1px_rgb(236_233_226/.18)]" />
               <div className="absolute right-4 top-4 grid h-11 w-11 scale-75 place-items-center rounded-full bg-bone text-ink opacity-0 transition-all duration-500 [transition-timing-function:var(--ease-out-expo)] group-hover:scale-100 group-hover:opacity-100 group-focus-visible:scale-100 group-focus-visible:opacity-100">
-                <ArrowUpRight className="h-5 w-5" />
+                <ArrowUpRight className="h-5 w-5 transition-transform duration-500 [transition-timing-function:var(--ease-out-expo)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </div>
             </motion.div>
           </div>
         </div>
-        <div className="mt-5 flex items-start justify-between gap-6 px-1">
-          <div className="min-w-0">
-            <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.14em] text-mute">
-              <span className="text-bone/50">{String(index + 1).padStart(2, '0')}</span>
-              <span className="h-px w-5 bg-white/20" />
-              <span className="truncate">{project.kicker}</span>
-            </div>
-            <h3 className={`mt-2 font-semibold tracking-[-0.035em] ${big ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl'}`}>
-              <span className="bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat transition-[background-size] duration-700 [transition-timing-function:var(--ease-out-expo)] group-hover:bg-[length:100%_1px]">
-                {project.name}
-              </span>
-            </h3>
-            <p className="mt-2 max-w-[38rem] text-[0.95rem] leading-relaxed text-mute">{project.tagline}</p>
-          </div>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2 px-1">
-          {project.tags.map((t) => (
-            <span key={t} className="chip">
-              {t}
+        {/* palette glow under the card, revealed on hover */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-[6%] top-[12%] -z-10 h-[62%] rounded-[3rem] opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"
+          style={{ background: `linear-gradient(120deg, ${project.palette[0]}33, ${project.palette[1]}2e)` }}
+        />
+        <div className="mt-5 px-1">
+          <p data-card-meta className="text-[13px] font-medium text-mute">
+            {project.kicker}
+          </p>
+          <h3 className={`mt-1.5 font-bold tracking-[-0.03em] ${big ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl'}`}>
+            <span className="bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-0.5 transition-[background-size] duration-700 [transition-timing-function:var(--ease-out-expo)] group-hover:bg-[length:100%_2px]">
+              {project.name}
             </span>
-          ))}
+          </h3>
+          <p className="mt-2 max-w-[36rem] text-[0.98rem] leading-relaxed text-mute">{project.summary}</p>
         </div>
       </a>
     </article>

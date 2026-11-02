@@ -1,7 +1,10 @@
 import { useRef } from 'react'
-import { gsap, MQ } from '../lib/gsap'
+import { gsap, MQ, ScrollTrigger } from '../lib/gsap'
 import { useIsDesktop, useIsoLayoutEffect, useReducedMotion } from '../lib/hooks'
+import { revealLines } from '../lib/reveal'
 import { acts, chapters } from '../content/site'
+import { projects } from '../content/projects'
+import { ArrowUpRight } from '../components/Icons'
 
 const actColor = { build: 'var(--color-build)', sell: 'var(--color-sell)', both: 'var(--color-bone)' } as const
 
@@ -30,6 +33,8 @@ export default function Story() {
     const el = root.current
     if (!el) return
     const mm = gsap.matchMedia()
+
+    mm.add(MQ.motion, () => revealLines(el.querySelector('#story-title')))
 
     mm.add(`${MQ.motion} and ${MQ.desktop}`, () => {
       const pin = el.querySelector<HTMLElement>('[data-pin]')!
@@ -95,6 +100,7 @@ export default function Story() {
       cards.forEach((card) => {
         const inner = card.querySelectorAll('[data-chapter-in]')
         const dot = card.querySelector('[data-dot]')
+        const body = card.querySelector('[data-chapter-body]')
         // Cards already on screen when the pin starts reveal on normal vertical scroll.
         const visibleAtStart = card.offsetLeft < window.innerWidth * 0.8
         const st = (start: string) =>
@@ -103,6 +109,17 @@ export default function Story() {
             : { trigger: card, containerAnimation: tween, start, toggleActions: 'play none none reverse' }
         gsap.from(inner, { y: 50, opacity: 0, stagger: 0.06, duration: 1, scrollTrigger: st('left 80%') })
         gsap.fromTo(dot, { scale: 0.4, opacity: 0.3 }, { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(3)', scrollTrigger: st('left 60%') })
+        // The chapter under the reading line is fully lit; the ones passing by sit back a little.
+        ScrollTrigger.create({
+          trigger: card,
+          containerAnimation: tween,
+          start: 'left 72%',
+          end: 'right 28%',
+          onToggle: (self) => {
+            gsap.to(body, { opacity: self.isActive ? 1 : 0.55, duration: 0.7, ease: 'power2.out', overwrite: true })
+            gsap.to(dot, { scale: self.isActive ? 1.25 : 1, duration: 0.5, ease: 'back.out(2)', overwrite: true })
+          },
+        })
       })
       el.querySelectorAll<HTMLElement>('[data-act-numeral]').forEach((n) => {
         gsap.fromTo(n, { xPercent: 30 }, { xPercent: -30, ease: 'none', scrollTrigger: { trigger: n, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true } })
@@ -123,9 +140,8 @@ export default function Story() {
   return (
     <section ref={root} id="story" tabIndex={-1} aria-labelledby="story-title" className="relative outline-none">
       <div className="container-x pb-12 pt-24 md:pt-32">
-        <p className="eyebrow mb-6">(02) The story</p>
-        <h2 id="story-title" className="display max-w-[16ch] text-[clamp(2.4rem,5.6vw,5.6rem)]">
-          Learned to <span className="serif-i text-build">build</span>. Learned to <span className="serif-i text-sell">sell</span>. Now I do <span className="serif-i">both</span>.
+        <h2 id="story-title" className="display max-w-[14ch] text-[clamp(2.4rem,5.6vw,5.6rem)]">
+          Learned to <span className="text-build">build</span>. Learned to <span className="text-sell">sell</span>. Now both.
         </h2>
       </div>
 
@@ -138,10 +154,10 @@ export default function Story() {
             <svg data-path-svg className="pointer-events-none absolute left-0 top-0" aria-hidden>
               <defs>
                 <linearGradient id="story-grad" gradientUnits="objectBoundingBox" x1="0" x2="1" y1="0" y2="0">
-                  <stop offset="0" stopColor="#5ce1e6" />
-                  <stop offset="0.38" stopColor="#5ce1e6" />
-                  <stop offset="0.52" stopColor="#ff7a45" />
-                  <stop offset="0.7" stopColor="#ffc46b" />
+                  <stop offset="0" stopColor="#9fbdd3" />
+                  <stop offset="0.3" stopColor="#9fbdd3" />
+                  <stop offset="0.45" stopColor="#f26b3a" />
+                  <stop offset="0.6" stopColor="#e8b97a" />
                   <stop offset="1" stopColor="#ece9e2" />
                 </linearGradient>
                 <filter id="story-blur" x="-10%" y="-50%" width="120%" height="200%">
@@ -162,13 +178,30 @@ export default function Story() {
             {chapters.map((c, i) => {
               const newAct = c.act !== lastAct
               lastAct = c.act
-              const act = acts[c.act]
+              const project = c.slug ? projects.find((p) => p.slug === c.slug) : undefined
               const offset = horizontal ? (i % 2 === 0 ? 'pt-[31vh]' : 'pt-[45vh]') : ''
+              const body = (
+                <>
+                  <p data-chapter-in className="text-[13px] font-medium text-mute">
+                    {c.when}
+                  </p>
+                  <h3 data-chapter-in className="mt-2 text-[clamp(1.6rem,2.4vw,2.4rem)] font-bold leading-[1.02] tracking-[-0.03em]">
+                    {c.org}
+                    {project && <ArrowUpRight className="ml-2 inline-block h-[0.6em] w-[0.6em] align-baseline text-mute transition-all duration-500 [transition-timing-function:var(--ease-out-expo)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-bone" />}
+                  </h3>
+                  <p data-chapter-in className="mt-1.5 text-sm text-bone/70">
+                    {c.role}
+                  </p>
+                  <p data-chapter-in className="mt-4 max-w-[26rem] text-[0.98rem] leading-relaxed text-mute">
+                    {c.body}
+                  </p>
+                </>
+              )
               return (
                 <li
                   key={c.org}
                   data-chapter
-                  className={horizontal ? `relative w-[min(30rem,34vw)] shrink-0 pr-[6vw] ${offset}` : 'relative'}
+                  className={horizontal ? `relative w-[min(26rem,30vw)] shrink-0 pr-[5vw] ${offset}` : 'relative'}
                 >
                   {newAct && horizontal && (
                     <span
@@ -176,7 +209,7 @@ export default function Story() {
                       aria-hidden
                       className="display text-outline pointer-events-none absolute left-0 top-[7vh] select-none whitespace-nowrap text-[24vh] leading-none opacity-40"
                     >
-                      {c.act === 'build' ? 'Build' : c.act === 'sell' ? 'Sell' : 'Both'}
+                      {acts[c.act]}
                     </span>
                   )}
                   <span
@@ -187,25 +220,14 @@ export default function Story() {
                   >
                     <span className="h-1.5 w-1.5 rounded-full" style={{ background: actColor[c.act] }} />
                   </span>
-                  <div className="relative">
-                    {newAct && (
-                      <p data-chapter-in className="eyebrow mb-4 flex items-center gap-2" style={{ color: actColor[c.act] }}>
-                        Act {act.numeral} — {act.title}
-                      </p>
+                  <div data-chapter-body className="relative">
+                    {project ? (
+                      <a href={`#/work/${project.slug}`} className="group block rounded-xl outline-none" data-cursor="Open" aria-label={`${c.org}: open case study`}>
+                        {body}
+                      </a>
+                    ) : (
+                      body
                     )}
-                    <p data-chapter-in className="font-mono text-xs text-mute">{c.when}</p>
-                    <h3 data-chapter-in className="mt-3 text-[clamp(1.7rem,2.6vw,2.6rem)] font-semibold leading-[1.02] tracking-[-0.035em]">
-                      {c.org}
-                    </h3>
-                    <p data-chapter-in className="mt-2 text-sm text-bone/80">{c.role}</p>
-                    <p data-chapter-in className="mt-5 max-w-[28rem] text-[0.98rem] leading-relaxed text-mute">{c.body}</p>
-                    <div data-chapter-in className="mt-5 flex flex-wrap gap-2">
-                      {c.tags.map((t) => (
-                        <span key={t} className="chip">
-                          {t}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </li>
               )
@@ -215,12 +237,12 @@ export default function Story() {
 
         {horizontal && (
           <div className="container-x pointer-events-none absolute inset-x-0 bottom-8">
-            <div className="flex items-center gap-4">
-              <span className="eyebrow">Build</span>
+            <div className="flex items-center gap-4 text-[13px] font-medium text-mute">
+              <span>2023</span>
               <div className="relative h-px flex-1 bg-white/10">
                 <div data-progress className="absolute inset-0 origin-left scale-x-0 bg-gradient-to-r from-build via-sell to-bone" />
               </div>
-              <span className="eyebrow">Both</span>
+              <span>2026</span>
             </div>
           </div>
         )}

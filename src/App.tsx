@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
+import { MotionConfig } from 'motion/react'
 import Header from './components/Header'
 import Cursor from './components/Cursor'
-import Marquee from './components/Marquee'
 import Hero from './sections/Hero'
 import Numbers from './sections/Numbers'
 import Story from './sections/Story'
@@ -23,16 +23,12 @@ export default function App() {
   }, [])
 
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <Header />
       <Cursor />
       <div className="grain" aria-hidden />
       <main id="main" tabIndex={-1} className="outline-none">
         <Hero />
-        <Marquee
-          className="border-y border-white/10 py-5 text-[clamp(1.8rem,4vw,3.6rem)] leading-none"
-          items={['Solutions Engineer', 'Forward Deployed', 'Solutions Architect', 'Sales Engineer', 'Founder', 'Account Manager']}
-        />
         <Numbers />
         <Story />
         <Work />
@@ -40,6 +36,6 @@ export default function App() {
         <Stack />
         <Contact />
       </main>
-    </>
+    </MotionConfig>
   )
 }

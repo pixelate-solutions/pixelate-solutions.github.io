@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { LayoutGroup } from 'motion/react'
 import { gsap, MQ } from '../lib/gsap'
 import { useIsoLayoutEffect } from '../lib/hooks'
+import { revealLines } from '../lib/reveal'
 import { lockScroll } from '../lib/smooth'
 import { projects } from '../content/projects'
 import ProjectCard from '../components/ProjectCard'
@@ -75,45 +76,33 @@ export default function Work() {
     if (!el) return
     const mm = gsap.matchMedia()
     mm.add(MQ.motion, () => {
+      const undo = revealLines(el.querySelector('#work-title'))
       el.querySelectorAll<HTMLElement>('[data-work-card]').forEach((card) => {
         const reveal = card.querySelector('[data-reveal]')
         const img = card.querySelector('[data-parallax]')
-        gsap.fromTo(
-          reveal,
-          { clipPath: 'inset(100% 0% 0% 0% round 1.5rem)' },
-          { clipPath: 'inset(0% 0% 0% 0% round 1.5rem)', duration: 1.5, ease: 'expo.inOut', scrollTrigger: { trigger: card, start: 'top 88%', once: true } },
-        )
-        gsap.fromTo(img, { scale: 1.25 }, { scale: 1, duration: 1.8, ease: 'expo.out', scrollTrigger: { trigger: card, start: 'top 88%', once: true } })
+        // Cards that share a row open left to right: the delay follows the card's horizontal position.
+        const delay = (card.getBoundingClientRect().left / window.innerWidth) * 0.3
+        const tl = gsap.timeline({ delay, scrollTrigger: { trigger: card, start: 'top 88%', once: true } })
+        tl.fromTo(reveal, { clipPath: 'inset(100% 0% 0% 0% round 1.5rem)' }, { clipPath: 'inset(0% 0% 0% 0% round 1.5rem)', duration: 1.5, ease: 'expo.inOut' }, 0)
+          .fromTo(img, { scale: 1.25 }, { scale: 1, duration: 1.9, ease: 'expo.out' }, 0.1)
+          .from(card.querySelectorAll('h3, p'), { y: 22, opacity: 0, duration: 1, stagger: 0.05 }, 0.45)
         gsap.fromTo(img, { yPercent: -4 }, { yPercent: 4, ease: 'none', scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: true } })
-        gsap.from(card.querySelectorAll('h3, p, .chip'), { y: 24, opacity: 0, duration: 1, stagger: 0.04, scrollTrigger: { trigger: card, start: 'top 80%', once: true } })
       })
-      gsap.from(el.querySelectorAll('[data-work-title] > span > span'), { yPercent: 110, duration: 1.3, stagger: 0.08, scrollTrigger: { trigger: el, start: 'top 75%', once: true } })
+      return undo
     })
     return () => mm.revert()
   }, [])
 
   return (
-    <section ref={root} id="work" tabIndex={-1} aria-labelledby="work-title" className="relative py-28 outline-none md:py-40">
+    <section ref={root} id="work" tabIndex={-1} aria-labelledby="work-title" className="relative py-28 outline-none md:py-44">
       <div className="container-x">
-        <div className="mb-16 grid gap-8 md:mb-24 lg:grid-cols-12">
-          <div className="lg:col-span-8">
-            <p className="eyebrow mb-6">(03) Selected work</p>
-            <h2 id="work-title" data-work-title className="display text-[clamp(2.6rem,6.4vw,6.5rem)]">
-              <span className="line-mask"><span className="block">Problems I scoped,</span></span>
-              <span className="line-mask"><span className="block serif-i text-bone/90">then shipped.</span></span>
-            </h2>
-          </div>
-          <div className="self-end lg:col-span-4">
-            <p className="text-lg leading-relaxed text-mute">
-              Each case: the problem, what I built, the architecture, and what it added up to. Client and employer details are anonymized where they need to be.
-            </p>
-            <p className="eyebrow mt-6">{String(projects.length).padStart(2, '0')} cases · click to open</p>
-          </div>
-        </div>
+        <h2 id="work-title" className="display mb-16 max-w-[12ch] text-[clamp(2.6rem,6.4vw,6.5rem)] md:mb-24">
+          Selected work
+        </h2>
         <LayoutGroup>
           <div className="grid grid-cols-12 gap-x-6 gap-y-16 md:gap-x-8 md:gap-y-24">
-            {projects.map((p, i) => (
-              <ProjectCard key={p.slug} project={p} index={i} onOpen={onOpen} linkRef={(el) => (links.current[p.slug] = el)} />
+            {projects.map((p) => (
+              <ProjectCard key={p.slug} project={p} onOpen={onOpen} linkRef={(el) => (links.current[p.slug] = el)} />
             ))}
           </div>
           <ProjectDetail slug={open} sharedSlug={shared} onClose={onClose} onNavigate={onNavigate} />

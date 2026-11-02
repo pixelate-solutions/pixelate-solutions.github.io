@@ -43,7 +43,7 @@ export default function Cursor() {
           big ? 'h-20 w-20 bg-white' : label ? 'h-12 w-12' : 'h-7 w-7'
         }`}
       >
-        <span className={`font-mono text-[10px] uppercase tracking-[0.14em] text-black transition-opacity duration-300 ${big ? 'opacity-100' : 'opacity-0'}`}>{big ? label : ''}</span>
+        <span className={`text-[12px] font-semibold text-black transition-opacity duration-300 ${big ? 'opacity-100' : 'opacity-0'}`}>{big ? label : ''}</span>
       </div>
     </div>
   )

@@ -1,13 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { gsap, MQ } from '../lib/gsap'
 import { useIsoLayoutEffect, useReducedMotion } from '../lib/hooks'
+import { drawRules, revealLines } from '../lib/reveal'
 import { skillGroups } from '../content/site'
 
 const W = 1000
 const H = 660
 const CX = W / 2
 const CY = H / 2 + 6
-const hueColor = { sell: '#ff7a45', build: '#5ce1e6', both: '#ece9e2' } as const
+const hueColor = { sell: '#f26b3a', build: '#9fbdd3', both: '#ece9e2' } as const
 
 // Cross-links between groups that show where the two halves meet.
 const bridges: [string, string, string][] = [
@@ -66,10 +67,15 @@ export default function Stack() {
     if (!el) return
     const mm = gsap.matchMedia()
     mm.add(MQ.motion, () => {
+      drawRules(el)
+      const undo = revealLines(el.querySelector('#stack-title'))
+      gsap.from(el.querySelectorAll('[data-stack-in]'), { y: 20, opacity: 0, duration: 1, stagger: 0.12, scrollTrigger: { trigger: el, start: 'top 80%', once: true } })
+      gsap.from(el.querySelectorAll('[role=tab]'), { x: -16, opacity: 0, duration: 0.8, stagger: 0.05, scrollTrigger: { trigger: el.querySelector('[role=tablist]'), start: 'top 85%', once: true } })
       const tl = gsap.timeline({ scrollTrigger: { trigger: el.querySelector('svg'), start: 'top 75%', once: true } })
       tl.from(el.querySelectorAll('[data-spoke]'), { attr: { 'stroke-dashoffset': 400 }, duration: 1.6, stagger: 0.05, ease: 'expo.inOut' })
         .from(el.querySelectorAll('[data-hub]'), { scale: 0, transformOrigin: 'center', duration: 1, stagger: 0.06, ease: 'back.out(2)' }, 0.2)
         .from(el.querySelectorAll('[data-node]'), { scale: 0, opacity: 0, transformOrigin: 'center', duration: 0.8, stagger: { each: 0.006, from: 'random' } }, 0.5)
+      return undo
     })
     return () => mm.revert()
   }, [])
@@ -81,17 +87,17 @@ export default function Stack() {
   const current = layout[active]
 
   return (
-    <section ref={root} id="stack" tabIndex={-1} aria-labelledby="stack-title" className="relative overflow-hidden border-t border-white/10 py-28 outline-none md:py-40">
+    <section ref={root} id="stack" tabIndex={-1} aria-labelledby="stack-title" className="relative overflow-hidden py-28 outline-none md:py-40">
+      <span data-rule className="absolute inset-x-0 top-0 h-px origin-left bg-white/10" aria-hidden />
       <div className="container-x">
         <div className="mb-14 grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-8">
-            <p className="eyebrow mb-6">(05) The stack</p>
             <h2 id="stack-title" className="display text-[clamp(2.4rem,5.6vw,5.6rem)]">
-              One constellation, <span className="serif-i text-bone/90">seven systems.</span>
+              The stack
             </h2>
           </div>
-          <p className="self-end text-lg leading-relaxed text-mute lg:col-span-4">
-            Engineering in <span className="text-build">cyan</span>, the field in <span className="text-sell">ember</span>. The lines between them are the work I like most.
+          <p data-stack-in className="self-end text-lg leading-relaxed text-mute lg:col-span-4">
+            Engineering in <span className="text-build">blue</span>, the field in <span className="text-sell">orange</span>. The lines between them are the work I like most.
           </p>
         </div>
 
@@ -127,7 +133,7 @@ export default function Stack() {
                     <span className="h-2 w-2 rounded-full" style={{ background: hueColor[g.hue] }} />
                     <span className="text-sm font-medium lg:text-lg lg:tracking-tight">{g.label}</span>
                   </span>
-                  <span className="hidden font-mono text-[11px] text-dim lg:inline">{String(g.skills.length).padStart(2, '0')}</span>
+                  <span className="hidden text-[12px] text-dim lg:inline">{String(g.skills.length).padStart(2, '0')}</span>
                 </button>
               ))}
             </div>
@@ -187,7 +193,7 @@ export default function Stack() {
                       strokeOpacity={on ? 0.95 : 0.35}
                       style={{ animation: 'dash 4s linear infinite', stroke: on ? '#ffc46b' : '#ece9e2', transition: 'stroke-opacity .6s' }}
                     />
-                    <text x={mx} y={my - 6} textAnchor="middle" className="hidden fill-bone font-mono text-[11px] md:block" opacity={on ? 0.9 : 0} style={{ transition: 'opacity .6s' }}>
+                    <text x={mx} y={my - 6} textAnchor="middle" className="hidden fill-bone text-[12px] font-medium md:block" opacity={on ? 0.9 : 0} style={{ transition: 'opacity .6s' }}>
                       {label}
                     </text>
                   </g>
@@ -218,7 +224,7 @@ export default function Stack() {
                             x={n.x + (left ? -8 : 8)}
                             y={n.y + 4}
                             textAnchor={left ? 'end' : 'start'}
-                            className="pointer-events-none hidden fill-bone font-mono text-[12.5px] md:block"
+                            className="pointer-events-none hidden fill-bone text-[13px] font-medium md:block"
                             opacity={showLabel ? 0.92 : 0}
                             style={{ transition: 'opacity .5s' }}
                           >
@@ -241,9 +247,9 @@ export default function Stack() {
 
               <g>
                 <circle cx={CX} cy={CY} r="34" fill="#08090a" stroke="#ece9e2" strokeOpacity=".5" />
-                <circle cx={CX} cy={CY} r="34" fill="none" stroke="#ff7a45" strokeOpacity=".6" strokeDasharray="53 160" style={{ transformOrigin: `${CX}px ${CY}px`, animation: 'spin 9s linear infinite' }} />
-                <circle cx={CX} cy={CY} r="34" fill="none" stroke="#5ce1e6" strokeOpacity=".6" strokeDasharray="53 160" strokeDashoffset="107" style={{ transformOrigin: `${CX}px ${CY}px`, animation: 'spin 9s linear infinite' }} />
-                <text x={CX} y={CY + 5} textAnchor="middle" className="fill-bone font-mono text-[14px] font-medium">
+                <circle cx={CX} cy={CY} r="34" fill="none" stroke="#f26b3a" strokeOpacity=".6" strokeDasharray="53 160" style={{ transformOrigin: `${CX}px ${CY}px`, animation: 'spin 9s linear infinite' }} />
+                <circle cx={CX} cy={CY} r="34" fill="none" stroke="#9fbdd3" strokeOpacity=".6" strokeDasharray="53 160" strokeDashoffset="107" style={{ transformOrigin: `${CX}px ${CY}px`, animation: 'spin 9s linear infinite' }} />
+                <text x={CX} y={CY + 5} textAnchor="middle" className="fill-bone text-[14px] font-bold">
                   JM
                 </text>
               </g>
