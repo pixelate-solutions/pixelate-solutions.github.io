@@ -40,8 +40,9 @@ export const ledgers: { id: 'book' | 'code'; title: string; byline: string; stat
     title: 'At Pixelate Solutions',
     byline: 'Founder and engineer, since 2024',
     stats: [
-      { value: 4, label: 'products in production' },
-      { value: 217, label: 'API routes behind one of them' },
+      // Counted in career/audit/project-count.md (36 counted, 29 without borderline items) and api-route-count.md.
+      { value: 30, suffix: '+', label: 'projects built' },
+      { value: 1200, suffix: '+', label: 'API routes shipped across his projects' },
     ],
   },
 ]

@@ -8,7 +8,7 @@ const W = 1000
 const H = 660
 const CX = W / 2
 const CY = H / 2 + 6
-const hueColor = { sell: '#f26b3a', build: '#9fbdd3', both: '#ece9e2' } as const
+const hueColor = { sell: '#8db4ff', build: '#3fd9cb', both: '#ece9e2' } as const
 
 // Cross-links between groups that show where the two halves meet.
 const bridges: [string, string, string][] = [
@@ -97,7 +97,7 @@ export default function Stack() {
             </h2>
           </div>
           <p data-stack-in className="self-end text-lg leading-relaxed text-mute lg:col-span-4">
-            Engineering in <span className="text-build">blue</span>, the field in <span className="text-sell">orange</span>. The lines between them are the work I like most.
+            Engineering in <span className="text-build">teal</span>, the field in <span className="text-sell">blue</span>. The lines between them are the work I like most.
           </p>
         </div>
 
@@ -247,8 +247,8 @@ export default function Stack() {
 
               <g>
                 <circle cx={CX} cy={CY} r="34" fill="#08090a" stroke="#ece9e2" strokeOpacity=".5" />
-                <circle cx={CX} cy={CY} r="34" fill="none" stroke="#f26b3a" strokeOpacity=".6" strokeDasharray="53 160" style={{ transformOrigin: `${CX}px ${CY}px`, animation: 'spin 9s linear infinite' }} />
-                <circle cx={CX} cy={CY} r="34" fill="none" stroke="#9fbdd3" strokeOpacity=".6" strokeDasharray="53 160" strokeDashoffset="107" style={{ transformOrigin: `${CX}px ${CY}px`, animation: 'spin 9s linear infinite' }} />
+                <circle cx={CX} cy={CY} r="34" fill="none" stroke="#8db4ff" strokeOpacity=".6" strokeDasharray="53 160" style={{ transformOrigin: `${CX}px ${CY}px`, animation: 'spin 9s linear infinite' }} />
+                <circle cx={CX} cy={CY} r="34" fill="none" stroke="#3fd9cb" strokeOpacity=".6" strokeDasharray="53 160" strokeDashoffset="107" style={{ transformOrigin: `${CX}px ${CY}px`, animation: 'spin 9s linear infinite' }} />
                 <text x={CX} y={CY + 5} textAnchor="middle" className="fill-bone text-[14px] font-bold">
                   JM
                 </text>

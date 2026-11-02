@@ -154,10 +154,10 @@ export default function Story() {
             <svg data-path-svg className="pointer-events-none absolute left-0 top-0" aria-hidden>
               <defs>
                 <linearGradient id="story-grad" gradientUnits="objectBoundingBox" x1="0" x2="1" y1="0" y2="0">
-                  <stop offset="0" stopColor="#9fbdd3" />
-                  <stop offset="0.3" stopColor="#9fbdd3" />
-                  <stop offset="0.45" stopColor="#f26b3a" />
-                  <stop offset="0.6" stopColor="#e8b97a" />
+                  <stop offset="0" stopColor="#3fd9cb" />
+                  <stop offset="0.3" stopColor="#3fd9cb" />
+                  <stop offset="0.45" stopColor="#8db4ff" />
+                  <stop offset="0.6" stopColor="#9fe3c4" />
                   <stop offset="1" stopColor="#ece9e2" />
                 </linearGradient>
                 <filter id="story-blur" x="-10%" y="-50%" width="120%" height="200%">

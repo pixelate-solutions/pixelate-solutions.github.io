@@ -65,7 +65,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(50% 40% at 12% 30%, rgb(143 179 201 / .10), transparent 70%), radial-gradient(45% 40% at 18% 80%, rgb(242 107 58 / .10), transparent 70%), radial-gradient(40% 50% at 78% 55%, rgb(236 233 226 / .06), transparent 70%)',
+              'radial-gradient(50% 40% at 12% 30%, rgb(63 217 203 / .10), transparent 70%), radial-gradient(45% 40% at 18% 80%, rgb(141 180 255 / .10), transparent 70%), radial-gradient(40% 50% at 78% 55%, rgb(236 233 226 / .06), transparent 70%)',
           }}
         />
         {showField && (

@@ -42,7 +42,7 @@ export default function Contact() {
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         aria-hidden
-        style={{ background: 'radial-gradient(60% 50% at 20% 100%, rgb(159 189 211 / .10), transparent 70%), radial-gradient(60% 50% at 85% 90%, rgb(242 107 58 / .12), transparent 70%)' }}
+        style={{ background: 'radial-gradient(60% 50% at 20% 100%, rgb(63 217 203 / .10), transparent 70%), radial-gradient(60% 50% at 85% 90%, rgb(141 180 255 / .12), transparent 70%)' }}
       />
       <div className="container-x">
         <h2 id="contact-title" data-contact-title className="display text-[clamp(3.6rem,13vw,14rem)] leading-[0.85]">

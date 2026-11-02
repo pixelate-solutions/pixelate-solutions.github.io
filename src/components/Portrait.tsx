@@ -136,7 +136,7 @@ export default function Portrait({ className = '' }: { className?: string }) {
       </div>
 
       {/* colour wash: cool on the engineer side, warm on the seller side */}
-      <div className="pointer-events-none absolute inset-0 mix-blend-soft-light" style={{ background: 'linear-gradient(90deg, rgb(159 189 211 / .35), transparent 45%, transparent 55%, rgb(242 107 58 / .35))' }} />
+      <div className="pointer-events-none absolute inset-0 mix-blend-soft-light" style={{ background: 'linear-gradient(90deg, rgb(63 217 203 / .35), transparent 45%, transparent 55%, rgb(141 180 255 / .35))' }} />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
 
       {/* divider */}
