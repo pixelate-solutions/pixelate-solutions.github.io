@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T06:01:03.901Z",
+  "generatedAt": "2026-11-02T06:38:04.371Z",
   "present": [
     "metriqs",
     "connected-machine-platform",
@@ -47,7 +47,7 @@
           "w": 1700,
           "h": 2200,
           "kind": "document",
-          "caption": "",
+          "caption": "(+ .pdf): Automated one-page Profit Leak Report. A 36-month deterministic analysis is graded on a scoring rubric and rendered as a branded US Letter PDF with the client's own logo, colors, and fonts.",
           "lqip": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAADQBACdASoYAB8APu1iqU2ppaOiMBgMATAdiWUAzOtfwCyyJvhf0QJPS8IIK38/gAD+7+MP1hTtOlZMmtilbprBJna1eZANDgJz0AFZk93nQdnaf66X8gT087nP9uIi+m62leZQvdNW8So8x4YAThbF3Uyym/9D8UBgN40GUC3llnXCNDVlV02Aw1h1VoulLdwUdl3jXlSmVSJ2pAg4P0cwAAA="
         },
         {
@@ -59,8 +59,8 @@
           "w": 2880,
           "h": 1800,
           "kind": "desktop",
-          "caption": "",
-          "lqip": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAgCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAeyAA/vC/s0eNvTQLAAA="
+          "caption": "Integrations for a client workspace. Toast, 7shifts, QuickBooks, and Shopify are connected and scoped per location.",
+          "lqip": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAeyAA/vC/s8bfAsHnV8/ugFgA"
         },
         {
           "base": "/img/work/metriqs/03-integrations-catalog",
@@ -71,8 +71,8 @@
           "w": 2880,
           "h": 1800,
           "kind": "desktop",
-          "caption": "",
-          "lqip": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAeyAA/vDSxgoWyQvICAQAAA=="
+          "caption": "Integration catalog by category (POS, accounting, banking, payments, commerce), with native adapters plus the Composio connector catalog.",
+          "lqip": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAgCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAeyAA/vC/pDvA0FhF3EIAAA=="
         },
         {
           "base": "/img/work/metriqs/04-team-and-locations",
@@ -83,8 +83,8 @@
           "w": 2880,
           "h": 1800,
           "kind": "desktop",
-          "caption": "",
-          "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAW+qnnz4AAP7xzDg5iBnGyR5THRF8D0q3lSjTlw5+8XAAAA=="
+          "caption": "Workspace team, with role-based access, location-scoped viewers, a pending invite, and per-location data inclusion.",
+          "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAgCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAeyAA/vCqu5LGqliCLdRimQ5jWRep/2tbypRpy4c/eLgAAA=="
         },
         {
           "base": "/img/work/metriqs/05-ai-connections-mcp",
@@ -95,20 +95,8 @@
           "w": 2880,
           "h": 1800,
           "kind": "desktop",
-          "caption": "",
-          "lqip": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAe/QAAP7wqgQpE5H6mBNvAgAA"
-        },
-        {
-          "base": "/img/work/metriqs/06-clients-staff",
-          "widths": [
-            960,
-            1920
-          ],
-          "w": 2880,
-          "h": 1800,
-          "kind": "desktop",
-          "caption": "",
-          "lqip": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAgCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAe/QAAP7wqgfzCrRcOI4XWAAA"
+          "caption": "\"Connect your AI\" setup for the MetrIQs MCP server (Claude, ChatGPT, Claude Code, Codex, Cursor) and the team's connected AI apps. Shown with a placeholder host.",
+          "lqip": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAgCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAe/QAAP7wqgerv0h+pgTbwIAA"
         },
         {
           "base": "/img/work/metriqs/07-earlier-inbox",
@@ -119,7 +107,7 @@
           "w": 2880,
           "h": 1800,
           "kind": "desktop",
-          "caption": "",
+          "caption": "Earlier version (pre-Oct 2026). Proactive Inbox: a sales-by-hour finding (\"Fill the 2 PM-5 PM lull at Waterfront\") with a dollar estimate and suggested actions.",
           "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZ2DrJQHD/gUItkjVxwAA/vCVOQxcaQpDZQ5PgLKm5CKzHQv5xh/Xemf8zSFg7S9DnQt1cZI8mlPqPXsYc+oDIfqAg8EcAAA="
         },
         {
@@ -131,7 +119,7 @@
           "w": 2880,
           "h": 1800,
           "kind": "desktop",
-          "caption": "",
+          "caption": "Earlier version (pre-Oct 2026). Goals: quarterly targets tracked against expected pace from live POS data, with driver breakdowns.",
           "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JZwBTAAbhqlg44L1wAAD+8GVUT4LOMT3s61k1TKL2tT/bSOKii6VxgUqwrgAA"
         },
         {
@@ -143,7 +131,7 @@
           "w": 2880,
           "h": 1800,
           "kind": "desktop",
-          "caption": "",
+          "caption": "Earlier version (pre-Oct 2026). Budget vs. actuals, joining accounting (QuickBooks P&L) and POS metrics by category.",
           "lqip": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZQAAUo95VVB8PAAA/vBsL4dkP4jQYuX1tAA0VAhhF2auAJD8AAAA"
         },
         {
@@ -155,7 +143,7 @@
           "w": 2880,
           "h": 1800,
           "kind": "desktop",
-          "caption": "",
+          "caption": "Earlier version (pre-Oct 2026). Luca, the in-app AI analyst, answers a labor question with a computed table and chart (canned demo conversation; numbers computed from the seeded data, no live model call).",
           "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwAwCdASoYAA8ALrV2u12jqampiYC0SzAABSTc0uR2Jw9f3QAA/vdV71SwZoGL8OxYYuT5OsoxRh4pwMqKP3pJd1uEkyBCMV11NLAhv6lyzo6seaQ0vxF2schv9ZbzzN+H9RJGoruGUqwAAAA="
         }
       ]
