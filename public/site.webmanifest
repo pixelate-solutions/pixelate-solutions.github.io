@@ -1,0 +1,8 @@
+{
+  "name": "Joseph Morrison",
+  "short_name": "JM",
+  "icons": [{ "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }],
+  "theme_color": "#08090a",
+  "background_color": "#08090a",
+  "display": "browser"
+}

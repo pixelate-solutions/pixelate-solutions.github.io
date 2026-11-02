@@ -1,0 +1,673 @@
+{
+  "generatedAt": "2026-11-02T04:34:58.598Z",
+  "present": [
+    "metriqs",
+    "acquisition-radar",
+    "link",
+    "civic-records-ai",
+    "pdu-configurator",
+    "marlow",
+    "meminios",
+    "northstar"
+  ],
+  "resume": "real",
+  "headshots": {
+    "casual": {
+      "base": "/img/headshot-casual",
+      "widths": [
+        480,
+        960
+      ],
+      "w": 1000,
+      "h": 1250,
+      "lqip": "data:image/webp;base64,UklGRv4AAABXRUJQVlA4IPIAAABQBgCdASoYAB4APu1qq1EppaOiqAqpMB2JbACdL8CVhYTbdIanz7pfWaHI4Jd+LKfBl96rSMLoLTin4ADfhMhDmyYs8KFPURy2JmRjBwLOLe7js3KRXmjesb9JiwnTFF3KE2M0/wGQq3E9yNBe448O7nvI1PWZaMeSeDeYV3JQDdeb3TBGRFLJe5x+yz6QokpxkevLY51CAYJVI9ltWfD85WvwOF8O21cOOWU4njqxyhmodByFQCkYTC3IKsg1eA9y+UN6TLh0tLI1xT+cq6Z7k1M0UMskp6vPo8nG/m/DA66VnWIEpdSk6PTL5Avjr/AAAA=="
+    },
+    "suit": {
+      "base": "/img/headshot-suit",
+      "widths": [
+        480,
+        960
+      ],
+      "w": 1000,
+      "h": 1250,
+      "lqip": "data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAADwBQCdASoYAB4APuFUpU2opCOiN/qoARAcCWIAnTMhgzek6mM/owTMiGNBfmPL423ohzCIH9M8AAD+P3p/F/iIZmXPZ50FsX0bx2aQC/866VW4NOCv5l5D0idekkTwfQiKU9cKqadel1uzBD8urVH5PxDGIXiOHMx660qEEQmoxoHknZv7UqkI/K9SQuqeR2i+3r60Tts5PLrp125VYAREVG4ulqhbDcfqo4gXtD1AQkwKBD30Y2OusZJTgIT0+33gE+m7u2ImbcWsdoT4Abpj//AQHplLM1GhfjIA"
+    }
+  },
+  "projects": {
+    "metriqs": {
+      "images": [
+        {
+          "base": "/img/work/metriqs/01-profit-leak-report",
+          "widths": [
+            700,
+            1400
+          ],
+          "w": 1700,
+          "h": 2200,
+          "kind": "document",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAADQBACdASoYAB8APu1iqU2ppaOiMBgMATAdiWUAzOtfwCyyJvhf0QJPS8IIK38/gAD+7+MP1hTtOlZMmtilbprBJna1eZANDgJz0AFZk93nQdnaf66X8gT087nP9uIi+m62leZQvdNW8So8x4YAThbF3Uyym/9D8UBgN40GUC3llnXCNDVlV02Aw1h1VoulLdwUdl3jXlSmVSJ2pAg4P0cwAAA="
+        },
+        {
+          "base": "/img/work/metriqs/02-integrations-connected",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAgCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAeyAA/vC/s0eNvTQLAAA="
+        },
+        {
+          "base": "/img/work/metriqs/03-integrations-catalog",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAeyAA/vDSxgoWyQvICAQAAA=="
+        },
+        {
+          "base": "/img/work/metriqs/04-team-and-locations",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAW+qnnz4AAP7xzDg5iBnGyR5THRF8D0q3lSjTlw5+8XAAAA=="
+        },
+        {
+          "base": "/img/work/metriqs/05-ai-connections-mcp",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAe/QAAP7wqgQpE5H6mBNvAgAA"
+        },
+        {
+          "base": "/img/work/metriqs/06-clients-staff",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "",
+          "lqip": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAgCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAe/QAAP7wqgfzCrRcOI4XWAAA"
+        }
+      ]
+    },
+    "connected-machine-platform": {
+      "images": []
+    },
+    "acquisition-radar": {
+      "images": [
+        {
+          "base": "/img/work/acquisition-radar/01-overview",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The Overview dashboard has a KPI strip, the top three ranked next actions, the current market regime, the highest-priority opportunities with color-coded deterministic scores, and unread alerts and briefings.",
+          "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JZwAASn11eVRzmAD+7MGUfyx/UxxWXC+ujcgaViOEnrPfZ3zIN3BZm1idjQwPAAA="
+        },
+        {
+          "base": "/img/work/acquisition-radar/02-market-timing",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Market Timing shows public FRED macro indicators (credit, industrial activity, labor) as charts with labeled axes and 12-month deltas. These feed an explainable market-regime classification.",
+          "lqip": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZ2VuV5kNPiBR9AD+7MGUfyrieHR4ZFWur2p20Z0wAA=="
+        },
+        {
+          "base": "/img/work/acquisition-radar/03-deal-radar",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Deal Radar ranks acquisition candidates with asking price, revenue, earnings basis, fit/motivation/management/confidence scores, tier, and next action. Unknown values show as \"—\" and are never treated as zero.",
+          "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwAAUqjk4ndFdP4AAP7swZR/KtyGNHOVWFDYXbkM9iMv1CiVgkMAAAA="
+        },
+        {
+          "base": "/img/work/acquisition-radar/04-company-scorecard",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The company scorecard shows the rules-based tier and five explainable scores. Each score is marked provisional or firm, and its components can be expanded. Beside it are the evidence-backed financial summary, pipeline stage, tasks, and partner notes.",
+          "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JZwAAUqbF782cAP7swZR/LHbXDlpFREF5VkSzrHcjSifhx0JReMc/rhEsiaAA"
+        },
+        {
+          "base": "/img/work/acquisition-radar/05-ai-memo",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The investment memo shows a thesis, fit, risks, diligence questions, and labeled claims (verified fact / source-reported / inference). It was produced through the guarded AI pipeline (schema-validated JSON, no tools) using a zero-cost demo fixture, so no paid model call was made.",
+          "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JZwDImB6Q+tb3u4PDqAAA/uzBlH8sw9wVgXF0+oHpUwXGIPpQGIGFtMQoAAAA"
+        },
+        {
+          "base": "/img/work/acquisition-radar/06-underwriting",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Underwriting is a deterministic deal model. Inputs are tagged as reported or assumption, with funding sources, debt service, DSCR across upside/base/downside/severe scenarios against the lender minimum, rate sensitivity, and exit values.",
+          "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAUqjkuOgA/uzBlH8sdxTK8g9hY+BD7CwCkUneDyw2RkhgAA=="
+        },
+        {
+          "base": "/img/work/acquisition-radar/07-inbox-briefing",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The in-app Inbox has a reading pane. Scheduled alerts and daily, weekly, and monthly briefings are generated by the pg-boss worker. This one shows the weekly acquisition memo with exactly three next actions.",
+          "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAwCdASoYAA8APu1kqU2ppaQiMAgBMB2JZwAAUqkFjCAUpde8AAD+7MGUfyp1PXUPXyJDmqo6fHd07Vm9NrUhxIYAAA=="
+        },
+        {
+          "base": "/img/work/acquisition-radar/08-weekly-memo-email",
+          "widths": [
+            700,
+            1400
+          ],
+          "w": 1520,
+          "h": 6396,
+          "kind": "document",
+          "caption": "The full weekly acquisition memo, rendered from the same HTML email template the worker produces: executive summary, candidates, tracked-company developments, industry shifts, macro changes, risks, and hypotheses.",
+          "lqip": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBgCdASoYAGUAPu1urFKppiOiok4hMB2JaRw1xzAACvVFCUDdrfEnNCCSxaUwQwOT6a1C/omdpAx3ITyEcAD+7/U67vtetMxB4e4QJuNXorz26cS1DbAwRAyfobsBuuZYHqkN9RLDebkklgwVkAprVnfiLVIaGVs1VKmV/UJ3UgSizA1U1IqP7IAetvUBcD8hbeVGfNzkfIirIdiwBJUprDW3jtT4R27QKN7VBdGuNOz1ldajXM2ECWVfcZZokCQAAA=="
+        }
+      ]
+    },
+    "link": {
+      "images": [
+        {
+          "base": "/img/work/link/01-dashboard",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Home. October spending plan with pace marker, cash after bills with its breakdown, and the three highest-value next moves, each quantified against the retirement goal.",
+          "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAUyxYQ4Cgi/x8ZAD+8d1h4EX2YR8Nlw/xSrGkAbtzeWnIGcwcS4VMzTfnM2tRDJkSVMOIw+aYOsPdeprBADHGBD2Sn1xHuJb0IAA="
+        },
+        {
+          "base": "/img/work/link/02-transactions-ai",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Activity with a transaction opened. Link's model categorized \"ACH BRIGHTPATH LEARNING CTR\" as Childcare at 90% confidence after no rule or bank category matched; AI-placed rows carry an \"AI 90%\" chip in the ledger.",
+          "lqip": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAABQAwCdASoYAA8APu1krU6ppaSiMAgBMB2JaQABNEd21iBuAAD+8JfRs2OuW3Uqvf0EwAAA"
+        },
+        {
+          "base": "/img/work/link/03-budgets",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The monthly spending plan, built from actual spending by category, with essentials and flexible spending split and overspent categories flagged.",
+          "lqip": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAgCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAeyAA/vCT+uBDZ68hPDNkvsuujbJ8AA=="
+        },
+        {
+          "base": "/img/work/link/04-insights",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Ask Link answering \"What if we had a child in two years?\" using the same deterministic planning tools as the rest of the app (no LLM key in demo mode).",
+          "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAUyyjHzC0hc3AIIAA/q7Z5eeg4Ii5AVK9DzrnpM4E5B6nYxmINxR0A+nZ16QTVXq2fEBaslqfSdSLEB42sAeZBGdGK/9hXjtnr8WzgAAA"
+        },
+        {
+          "base": "/img/work/link/05-plan-projection",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Retirement projection with conservative-to-optimistic band, likely window, and sliders for extra investing and retirement spending.",
+          "lqip": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAeyAA/vCo5Au1i3RrFDnXrjWeMbfPgAAA"
+        },
+        {
+          "base": "/img/work/link/06-mobile-home",
+          "widths": [
+            420,
+            840
+          ],
+          "w": 1170,
+          "h": 2532,
+          "kind": "mobile",
+          "caption": "Home on a phone.",
+          "lqip": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAAAQBwCdASoYADQAPu1kqk2ppaQiMBgMATAdiWcAyUwR//xYydedz3rQyKpM7arfHM7oWV0Gjyv4t1D5aOOQPYOaAAD+8DnHDIhyWAYRZygbQeH8hdid2Schc/LRxPzUQ1RmSlOspNIZjG8It+tJQg77OSXjUWATzxVot60hYgsDpyA3rZJUwqW6PAIMBMenB7B7A1uJGpyE2wT594KpyB/jnZyDyfZMm2uTRawDLksKPSppYSjHpz51qpOB/OMSadvyL+5DPjy+BWWnB1z9Swa0LreuWSaIvgab64H4yhOlsfcKkDjEKfAJdUh2VAJOBCh3GgoCdNGxkAAA"
+        },
+        {
+          "base": "/img/work/link/07-mobile-activity",
+          "widths": [
+            420,
+            840
+          ],
+          "w": 1170,
+          "h": 2532,
+          "kind": "mobile",
+          "caption": "Activity on a phone, with the summary of how 497 transactions were sorted (rules and bank data, model, user, needs review).",
+          "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADwBQCdASoYADQAPu1urlGppiQiqAlZMB2JaQALAAGr/kpjDZ8BG/AhNkWgZvZfwTf+bDun63JuAAD+8Cdn3S5i0OxfFWMgp1+jiXOmuyUG8zDT+r+fJlLxknIXa4qwNdoOF4ZAIYPtgRp3uJcqS0KIUPsMeYs7UjD8H1SXaY7MwHEyPUkkDYbTU8hKNT4e1P1Df0r9foDG+R1nArwGzYdWRCpu6T29Xi4XGXngAAA="
+        }
+      ]
+    },
+    "civic-records-ai": {
+      "images": [
+        {
+          "base": "/img/work/civic-records-ai/01-cited-answer",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "A fire officer asks whether a rear-stair violation was really resolved. The answer quotes the inspection, reinspection, and incident report, with numbered citation chips and source cards that carry each record's classification and highlighted terms.",
+          "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwAAUqf8MRPQAAD+6PH48+IkrVvbOSJSZ0B2jGlGVclEAFCcseIfr4AAAA=="
+        },
+        {
+          "base": "/img/work/civic-records-ai/02-source-highlight",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Clicking a citation opens the source PDF at the cited page with the matching passage highlighted, plus extracted entities and related records.",
+          "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwBTAAbt53FgrVRKOuAA/ujx981dmSPnrpBMmunZgdSmk23uKkmGrI+liFtKCXVyB6cJ3dEP/j+oAAA="
+        },
+        {
+          "base": "/img/work/civic-records-ai/03-document-library",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The document library shows each record's classification and how its text was extracted (native text layer or local Tesseract OCR), and notes how many records the user's role withholds.",
+          "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZQCw7BugdWV7boAAAP7o8fj1sZldItZj6yYFVowYhpYeqNAu0KYYHJe0l66ALcAAfr/YBbnwAA=="
+        },
+        {
+          "base": "/img/work/civic-records-ai/04-access-audit",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The records administrator's view: the role-by-classification policy matrix, per-class record counts, and an append-only audit log that includes denied access attempts.",
+          "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwAAXecaaPFpkAD+6PH720yqR0ml4lyUj76+xQ5jiz46ggJAN95mezk4QAAA"
+        },
+        {
+          "base": "/img/work/civic-records-ai/05-role-filtered-search",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The same corpus seen by a Public Information Officer. Hybrid keyword and vector search returns only Public records, and the sidebar shows 11 records withheld.",
+          "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZQDE2CKUbxbJuNDwAP7o8fvbTKkXnQH4wjVC+/4cc/dAllu4G8bbIdlSJfbK7/hVabocQAA="
+        },
+        {
+          "base": "/img/work/civic-records-ai/06-version-compare",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Comparing two revisions of a high-rise SOP gives a sentence-level \"now / was\" summary of every operational change, above a full line diff.",
+          "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoYAA8APu1kqk4ppaQiMAgBMB2JYwCdINiDE3cCL4ExgOgNgAD+6R4+qxkdaRU0w+nZr2wjs+PPt2S0gLkWX9zUAVq7NOpkPW48aoxp70KnOZgjk6tDQiDSB/1aqPa6MGFGR+NzRbo+QVE4YxiQAAAA"
+        },
+        {
+          "base": "/img/work/civic-records-ai/07-sign-in",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The sign-in page with the on-prem pitch and one-click demo accounts for each role.",
+          "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JYwC7ABtdMXxIJfSgAP7sJQRCNyJgDocPfmMEALr2BXNA+yvAs5dWxpxoaijJCFDhLueyxzcaXwyGwAA="
+        }
+      ]
+    },
+    "pdu-configurator": {
+      "images": [
+        {
+          "base": "/img/work/pdu-configurator/00-overview",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Product catalog: four configurators (PDU, RPP, distribution panels, panelboards), each backed by its own rules module.",
+          "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwAAXfCKemE9gAD+7qH9r2caG0yMrYIIH+36VR4PvnjoGRFpvf4Tin59zGbAxLwAAA=="
+        },
+        {
+          "base": "/img/work/pdu-configurator/01-pdu-step-power",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Step 1 of the guided PDU flow (capacity, output voltage, SCCR), with live rule validation, front elevation drawing, model number and running list price.",
+          "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JZwDE2B6RBRR0+iQc0lYQAP7uofrQWSYXch+mg2pQU02G9CJQNm1nRQKE/J9Cs4LU78d9YUg2HfnGvuUBh8Wb96hLAAAA"
+        },
+        {
+          "base": "/img/work/pdu-configurator/02-pdu-step-distribution",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Branch distribution step: a bay-capacity meter counts 600 A+ frames as two positions, and the drawing redraws as quantities change.",
+          "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JZwDG9B6Qc7N1M57D7KvYAP7uoft9A83QoCwylVXkNm0kxLBbdTc618y7HfdgA49WajelhcOxzQHNp1PTwvuUv5L7UHYrgAA="
+        },
+        {
+          "base": "/img/work/pdu-configurator/03-pdu-rule-validation",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Rule validation: 800 A breakers in an outdoor NEMA 3R enclosure with bottom feed. Two blocking errors with rule IDs, plain-language explanations and one-click fixes; offending options flagged in red.",
+          "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoYAA8APu1iqk2ppaQiMAgBMB2JZwDDNYr6yXoid1BooR+AAAD+7qH7fQOmA+IGNQM9nhykcI/iN2UIpf9gBoCIYj927iVzYtvmO5zTI0miUCqfba8AySB5gAA="
+        },
+        {
+          "base": "/img/work/pdu-configurator/04-pdu-quote-bom",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Review & Quote: editable customer/project header, priced bill of materials, quote total, and export (print/PDF, CSV, PNG drawing, JSON config).",
+          "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoYAA8APu1mq04ppaQiMAgBMB2JZwDE2Gf/iJ4TwrLfaOgAAP78vc63/zQFW1c2upPKBfxqxT1MpMoUacroEg1jujRhIJ9lIA2MlrEwO2NJ/5bY97a3JoLgAAA="
+        },
+        {
+          "base": "/img/work/pdu-configurator/05-pdu-print-quote",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Print view of the generated budgetary quotation (browser print / Save as PDF): branded header, specs, drawing and priced BOM.",
+          "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQAwCdASoYAA8APu1iqk4ppaQiMAgBMB2JZwAAXAYfW0foAAD+6oNLEhcInvGjUeR5g7Nmqv/cuH6i4thUfqgkrXBk3PQ+AAA="
+        }
+      ]
+    },
+    "marlow": {
+      "images": [
+        {
+          "base": "/img/work/marlow/01-review-queue",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Review queue. Every AI-drafted email waits here with the evidence behind it: why the prospect was chosen, the angle, the signals, cited public sources, and an explicit note on what the research could not confirm.",
+          "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAwCdASoYAA8APu1iqk4ppaQiMAgBMB2JZQAASn1/WY/akO8AAP7o8fj1sZldRgun5q1eztWNeVlWo0U3KL0rRV4IaAAA"
+        },
+        {
+          "base": "/img/work/marlow/02-approval-dialog",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Approval dialog. The human approves one exact message; the server re-verifies hashes, suppression, mailbox, sending window, and limits before any mailbox is called. The model has no send tool.",
+          "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAwCdASoYAA8APu1kq04ppaQiMAgBMB2JZQAAYB19pUmYeW3gAP7r+lf+S0ayfpOmkyvjTKUGTJ+tE2nbyfaqhcvWECS0Gck1wQ0AAAA="
+        },
+        {
+          "base": "/img/work/marlow/03-campaign-icp-leads",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Campaign view. The ideal customer profile Marlow built from the discovery chat, and the qualified leads found through Apollo's MCP server, each with fit score and status (awaiting approval, sent, replied, researching, skipped).",
+          "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JZwAAUqjlo/7umaqgAP7o8fni7qE8aPVq9oxbV1HSMysZCebAL7/cF8SAAA=="
+        },
+        {
+          "base": "/img/work/marlow/04-dashboard",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Outbound workspace. Campaigns in motion, live agent activity, and the daily send and Apollo credit guardrails.",
+          "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZwAAV/6w1jbAAAD+6PH49bF9rUZgl/G46gbXEULrvRNC+xHCTh6S7rE5YAAA"
+        }
+      ]
+    },
+    "meminios": {
+      "images": [
+        {
+          "base": "/img/work/meminios/01-ask-cited-answer",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Ask. A cited answer to \"Who approves pricing exceptions in EMEA?\" viewed as the Sales VP. The permission strip shows 5 matching sources, 3 readable, 2 excluded before synthesis, and 1 passage withheld because it cites a Finance-only document. Switching to Customer Success or Finance changes the answer.",
+          "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwCAAAzygAeEpUAA/u+2GKMPulm5dNsRzUYrRWX0xw6WMmcyRLd2A3pAAAAA"
+        },
+        {
+          "base": "/img/work/meminios/02-mcp-tools",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Agents. The six MCP tools (5 read, 1 propose-only) with the guardrail each enforces, a client config for Claude or Cursor, and a sample brainanswer call.",
+          "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACQAwCdASoYAA8APu1kqU2ppaOiMAgBMB2JZwCAAAzyQbcuctKAAP7v9zWmLCUaOJkzZWYPt1NzvFGvWIxIAA=="
+        },
+        {
+          "base": "/img/work/meminios/03-brief",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Brief. A morning brief of proactive, cited Signals: slipping commitments, stale policy, and duplicate work.",
+          "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoYAA8APu1kq04ppaQiMAgBMB2JZwC+SC0IWtLyxAAA/u+wU7um5Hl0XS+Zn4iWldZSqabptZDt27nsyUf/usuhFAsgAAAA"
+        },
+        {
+          "base": "/img/work/meminios/04-map",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Map. A focused one-hop entity graph with plain-language, source-backed relationships and an entity profile drawer.",
+          "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwC7ADKLC3leJEAA/u/zNCKdhK/5EFi6rY1UllCAxLUXyojznF0umb9kF6AA"
+        }
+      ]
+    },
+    "northstar": {
+      "images": [
+        {
+          "base": "/img/work/northstar/01-landing",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Landing page. \"Every day of the trip, on one map.\" with the route illustration and feature row.",
+          "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZwAAWqHGzsOKAXLaokAA/usyuQWLfkWbO0stURdN9HH5IxXxYEhAAmGLohVvgt6vyooFF3qF6hwMHPKlFgLD+3bHnTPH39ukCM29AAA="
+        },
+        {
+          "base": "/img/work/northstar/02-trip-map",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Whole-trip view. Eight days, 42 stops, one driving route across Zion, Bryce, Capitol Reef, Moab, Monument Valley, Page and the Grand Canyon.",
+          "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwAAUp6kGn6nYL0AAP7uEX5NclQHu/gjlkd9Hd3VW4JfMkGq2RbsgztNOJiy9KUaIQVsAL0pJTqbFjzvd70lNhePU8AoU9FR5qUiXgAAAA=="
+        },
+        {
+          "base": "/img/work/northstar/03-day-itinerary",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Day view (Day 2, Angels Landing & The Narrows). Timed stops, category pills, costs, drive legs between stops, and the day's route on the map.",
+          "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZQAAYcmOCrqyNwDtEXmAAP7uEWHZAKRy29rQbrwA1SShxFEQdXtQI0ojQ3hs7nOteOFfH4s+YFGJn+xSYcS8AAA="
+        },
+        {
+          "base": "/img/work/northstar/04-ask-edit-undo",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "The AI assistant edits the plan. It adds Mossy Cave Trail to Day 3 in time order, highlights the new stop, and offers a one-click Undo.",
+          "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQBACdASoYAA8APu1iqU2ppaOiMAgBMB2JZwDMHB4mIob4CWY/DL5DIAD+7hGAunEMRSr+enDDk1Kjh+vDd/4V9G/naFX7xFoIL6TnBkvYBKU1QXeywffy749cAA=="
+        },
+        {
+          "base": "/img/work/northstar/05-planner-input",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "New-trip planner input: destination, start date, length, and \"Draft it for me\".",
+          "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZwAAW+qyNYDAAP7xysOLbEBCrwzd3lSgOZZU/J2gAPqI263AAA=="
+        },
+        {
+          "base": "/img/work/northstar/06-mobile-landing",
+          "widths": [
+            420,
+            840
+          ],
+          "w": 1170,
+          "h": 2532,
+          "kind": "mobile",
+          "caption": "Landing page on iPhone-size web.",
+          "lqip": "data:image/webp;base64,UklGRkYBAABXRUJQVlA4IDoBAAAwCACdASoYADQAPu1irVAppSQirBqpmTAdiUAZYiAXQHiAZIAOWwQNkpOg1AFerGFKlgfHL5rDjV3MkJs2l025Z2x0gmzuzpbPaAD+8DmFlIOA4uhKf9qhRz1OcAk6g5krORPkubAjYhPNlN8l2ABfJ3XUCpNer4lXyX4Lu+FUscSB6C1u/QBawRxuQDtn4jie+a5L4MjPgeC4Ev5ORaexkudt1YMYQrFgCj4x9V14aMyQXc1XZ9EqweWHLaWHZAacEpF9Pdz9S+E6JWxgYoATPv0h2Fb+cA6FySAykwv46PPqXY5yQorlEaihpDJRp/n889wdfy0Q6ne0QWPScra9tJXhhVT1DinimQm6/LzHvMMcQsZuwxBv7F7NNeTl5Zm1MXDqaVeYdf32iLkWTVmvwFrJM1+kGTkoAA=="
+        },
+        {
+          "base": "/img/work/northstar/07-mobile-day",
+          "widths": [
+            420,
+            840
+          ],
+          "w": 1170,
+          "h": 2532,
+          "kind": "mobile",
+          "caption": "Mobile day view (Day 5, Goblin Valley to Moab). The map sits above a pull-up drawer with day pills.",
+          "lqip": "data:image/webp;base64,UklGRigBAABXRUJQVlA4IBwBAACQBwCdASoYADQAPulmqE2pJiQiLBquYSAdCWUAyRQIHaJnSndOqseJsC6xeBPezyX9QtRsUBFE3WbTqhUiAG7r7oQ9+8AA/tVplJx7vbu+O/WvP+csnA1cts5L/u/U0lArw/uhBqXKgby25qEHCnwnAE0hg3IQqY1yWmhLfao3Cr8H+vY+i+asfLaAECCtwmq1Woe+HKhfsmBOS9CyNpiMinyBf6Es+DWeB6EvtgzKilDTg4Eufl4pvp68lEY7lXg5jDzj93EodhBOfTJGLV/r7y5FGc4qyiHetuh0DVyjF0kkaqkUEeLwKS4LtFvS8Yinrn7XSO7z4Analo0yM1Gf+/PD0qbX5PwryK5JPN+6gFj1L82bagyOgQ+AAA=="
+        },
+        {
+          "base": "/img/work/northstar/08-mobile-trip-map",
+          "widths": [
+            420,
+            840
+          ],
+          "w": 1170,
+          "h": 2532,
+          "kind": "mobile",
+          "caption": "Mobile whole-trip view with the route map and day list.",
+          "lqip": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4ICABAABQBgCdASoYADQAPu1kqE6ppaOiLAsxMB2JZQDLqJMgWrOxHCPfQapMXpP3J4l0L0utsKX8eEiCBavZMAD+1cbIrj3e4MOhg6GGwGlykQjDjLbTuDlOSTMAvfnxnvtBJolE2ro8lkw7gHVjLs2IeAeczbCChNf5kqWKQa9SpOl04wXbeCZgYg55XR/dmc/8rdyvI3JmtLPaIGJ0JBP2UQmEXxDeOFB/NeCkAkIFRroR4n43TzaYa8UkuKTT7XaM9aeeSQ16QPZaHp/DqYQv83IYA3g6mBcubM/6NFQqSn2F7RgdmvDRsc80sig1R8z7/K5DQ6j/SAUvjwrbAZjJ9ztY+Df55/9U6f3J/SPE/edC3cBxr1A0DbTmkKtCTxgAAAA="
+        }
+      ]
+    }
+  }
+}
