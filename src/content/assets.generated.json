@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-11-02T04:34:58.598Z",
+  "generatedAt": "2026-11-02T05:00:53.355Z",
   "present": [
     "metriqs",
+    "connected-machine-platform",
     "acquisition-radar",
     "link",
     "civic-records-ai",
@@ -111,7 +112,200 @@
       ]
     },
     "connected-machine-platform": {
-      "images": []
+      "images": [
+        {
+          "base": "/img/work/connected-machine-platform/01-mobile-lineup",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 5400,
+          "h": 2600,
+          "kind": "desktop",
+          "caption": "The iOS/Android customer app (Expo + React Native): home, live telemetry, metric history, AI-triaged support, and resources.",
+          "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoYAAwAPu1krU2ppaSiMAgBMB2JZwDG9CHgBgdmz1f/E8AAAP7ynhJe/ORX066Nh/XEBRAwJ/X8l0oynZoo5+zmTC4WQ3m4G+QhoVi7IwAAAA=="
+        },
+        {
+          "base": "/img/work/connected-machine-platform/02-mobile-home",
+          "widths": [
+            700,
+            1400
+          ],
+          "w": 1200,
+          "h": 2156,
+          "kind": "document",
+          "caption": "Customer home with fleet, ticket, sample, and live-data counts and recent activity.",
+          "lqip": "data:image/webp;base64,UklGRtABAABXRUJQVlA4WAoAAAAQAAAAFwAAKgAAQUxQSPoAAAANgFvbtmpln3M/7u7urgWQujVAKRRATKgFENKFu6Waud733jnou3cQEUbEBAAscGUIQBTWz+QrxTlae2aBCYbmoYyY0pk1e8siaXMIWONwNNyyYESrcpBAfMHgbkCc/gr3VLyr4ciD4UiYQw9MAoJ6IFKVYh8gBb0mGQ8AKDRwVwIkRz0khwIIOxFyngPipxTj8rNkK/6uTTD4Lj3honSfkaT0lsQuACkAUnhW8vVvruRDCYClJBclywmYm6seoXgGG9nJqq+LE/VKcZTXg4I3Dml3tbqI+ReV8DyzOttwZKOLrRdDv0CjsvqsZEMSvVkJIv2NEwmTkiAAVlA4ILAAAACwBQCdASoYACsAPu1wrlGppiQiqrgIATAdiWcA0FQKHQFq1/odrWRaX+IkHv2L8DF3sRn8wxAA/vDg2sNdElw+EIh46nyUv+JKzChfYen3Zh8JPsLekIMc8MYY0BkBNjpild4x7DbDWnWbE7IS+sGkSiZsDBC38Gxsxk4NERFNE832mXBusyxpoyqzebPLgVJxINqAz1XUvsm+uF5i1gpRRZ/SPGzRqkLreuVCgtAAAA=="
+        },
+        {
+          "base": "/img/work/connected-machine-platform/03-mobile-telemetry",
+          "widths": [
+            700,
+            1400
+          ],
+          "w": 1200,
+          "h": 2156,
+          "kind": "document",
+          "caption": "Pinned live readings for a machine (current, laser state, vibration, temperature, DC rail, line voltage).",
+          "lqip": "data:image/webp;base64,UklGRqgBAABXRUJQVlA4WAoAAAAQAAAAFwAAKgAAQUxQSPoAAAANgFvbtmpln3M/7u7urgWQujVAKRRATKgFENKFu6Waud733jnou3cQEUbEBAAscGUIQBTWz+QrxTlae2aBCYbmoYyY0pk1e8siaXMIWONwNNyyYESrcpBAfMHgbkCc/gr3VLyr4ciD4UiYQw9MAoJ6IFKVYh8gBb0mGQ8AKDRwVwIkRz0khwIIOxFyngPipxTj8rNkK/6uTTD4Lj3honSfkaT0lsQuACkAUnhW8vVvruRDCYClJBclywmYm6seoXgGG9nJqq+LE/VKcZTXg4I3Dml3tbqI+ReV8DyzOttwZKOLrRdDv0CjsvqsZEMSvVkJIv2NEwmTkiAAVlA4IIgAAADQBACdASoYACsAPu1mp0+ppSMiMBVaqTAdiWkAABw0BvkZ7TvWjg8PC301ku/KAAD+8ODaQypFrxwIp8dEw66plASB8KRUfijJnWAsochHQKrlgt0rbbVUmpx59XbCnDITKG1jx9uyp4Sds53iGCI397IcUQds/oSMzuZW+aWQ0DxKdE+ZSgAA"
+        },
+        {
+          "base": "/img/work/connected-machine-platform/04-mobile-telemetry-history",
+          "widths": [
+            700,
+            1400
+          ],
+          "w": 1200,
+          "h": 2156,
+          "kind": "document",
+          "caption": "Temperature history over 30 days, served from 5-minute rollups.",
+          "lqip": "data:image/webp;base64,UklGRsoBAABXRUJQVlA4WAoAAAAQAAAAFwAAKgAAQUxQSPoAAAANgFvbtmpln3M/7u7urgWQujVAKRRATKgFENKFu6Waud733jnou3cQEUbEBAAscGUIQBTWz+QrxTlae2aBCYbmoYyY0pk1e8siaXMIWONwNNyyYESrcpBAfMHgbkCc/gr3VLyr4ciD4UiYQw9MAoJ6IFKVYh8gBb0mGQ8AKDRwVwIkRz0khwIIOxFyngPipxTj8rNkK/6uTTD4Lj3honSfkaT0lsQuACkAUnhW8vVvruRDCYClJBclywmYm6seoXgGG9nJqq+LE/VKcZTXg4I3Dml3tbqI+ReV8DyzOttwZKOLrRdDv0CjsvqsZEMSvVkJIv2NEwmTkiAAVlA4IKoAAABQBgCdASoYACsAPuFeo02opaMiNVgMARAcCUAaPwKG62z71WKl85N+9JOlq3Gatgl8DJ8PUROB5GpMIAD+8rg1VHzSLXjg8G8+8rnEYmEkmmoDw1kFmv0mgMghkAd9odrIDJkAMk0oshg0ALyMmOqPGFW/XylH4JfcZKf6VvxFNHl7ORg7ykn9Zj2ICQ8Bu1H/xJoIJRfw/XVwA8NgXs5ygNy5hNUGZEigAA=="
+        },
+        {
+          "base": "/img/work/connected-machine-platform/05-mobile-support-ai-triage",
+          "widths": [
+            700,
+            1400
+          ],
+          "w": 1200,
+          "h": 2156,
+          "kind": "document",
+          "caption": "Support hub with AI support chat, a new-ticket flow, and tickets carrying \"AI Triaged\" categories.",
+          "lqip": "data:image/webp;base64,UklGRggCAABXRUJQVlA4WAoAAAAQAAAAFwAAKgAAQUxQSPoAAAANgFvbtmpln3M/7u7urgWQujVAKRRATKgFENKFu6Waud733jnou3cQEUbEBAAscGUIQBTWz+QrxTlae2aBCYbmoYyY0pk1e8siaXMIWONwNNyyYESrcpBAfMHgbkCc/gr3VLyr4ciD4UiYQw9MAoJ6IFKVYh8gBb0mGQ8AKDRwVwIkRz0khwIIOxFyngPipxTj8rNkK/6uTTD4Lj3honSfkaT0lsQuACkAUnhW8vVvruRDCYClJBclywmYm6seoXgGG9nJqq+LE/VKcZTXg4I3Dml3tbqI+ReV8DyzOttwZKOLrRdDv0CjsvqsZEMSvVkJIv2NEwmTkiAAVlA4IOgAAABQBgCdASoYACsAPu1orU+ppiQiKqoBMB2JZADKEf/qXuGjoUHix3OidpQTChSOpekCB2dd9MWt/7MkAAD+8ODaw10SXDvU4u9ofyPtpVxcaJ4KjLBuBW/xMe6kK0T+01mVwt3x3MP/+Y3fgf8Wj1vwl4n9iwjoL0aGtjo4R5ejxDOrtGrYINyqNydmRrFGVQpbbnWG1/mHJmYhRMnxDZDVThiM2XrIKjFVRmK6aA8h8BeovJFH9/EUiXQoYZX2URZCifofubjS64NzPMh6ra31hFMsqEAEP3zDMk9pOka5G5hu6kbY2AAA"
+        },
+        {
+          "base": "/img/work/connected-machine-platform/06-mobile-resources",
+          "widths": [
+            700,
+            1400
+          ],
+          "w": 1200,
+          "h": 2156,
+          "kind": "document",
+          "caption": "Resource library: FAQ, manuals, videos, training, downloads, and application notes.",
+          "lqip": "data:image/webp;base64,UklGRroBAABXRUJQVlA4WAoAAAAQAAAAFwAAKgAAQUxQSPoAAAANgFvbtmpln3M/7u7urgWQujVAKRRATKgFENKFu6Waud733jnou3cQEUbEBAAscGUIQBTWz+QrxTlae2aBCYbmoYyY0pk1e8siaXMIWONwNNyyYESrcpBAfMHgbkCc/gr3VLyr4ciD4UiYQw9MAoJ6IFKVYh8gBb0mGQ8AKDRwVwIkRz0khwIIOxFyngPipxTj8rNkK/6uTTD4Lj3honSfkaT0lsQuACkAUnhW8vVvruRDCYClJBclywmYm6seoXgGG9nJqq+LE/VKcZTXg4I3Dml3tbqI+ReV8DyzOttwZKOLrRdDv0CjsvqsZEMSvVkJIv2NEwmTkiAAVlA4IJoAAABQBQCdASoYACsAPu1orVCppaQipWzJMB2JZwDQzApT9ENkZA2YCbKojLlMGy8KCGmT9AAA/vDg2sNdElw+EIhaMURdAwSRykHMlO6UBrQSRCNPpjPntfBX+YE/lyYgPJAKghfepk+addRRjuZLrOjKe2FCCyVgvOELf/FzNdXIWIfkg4rKJQjd+61nOTTheZMpI9f7HSjdA2AA"
+        },
+        {
+          "base": "/img/work/connected-machine-platform/07-web-home",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Staff admin home (Next.js). KPI tiles agree with the fleet, ticket, and telemetry data.",
+          "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAShdhdcvwAAD+zc3nE6EPv3o00yJMszYPyoPH9WePSVxbDOI7K2wAAA=="
+        },
+        {
+          "base": "/img/work/connected-machine-platform/08-web-ticket-dashboard",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Ticket analytics: open work by workflow stage, stale tickets, technician hours, customer time, and issue types.",
+          "lqip": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAwBACdASoYAA8APu1kqU2ppaOiMAgBMB2JZQBTAsv8CzKLyMEYWk3PowAA/uRpDMoUPv3G6wu/6EzQoewbrWhU343FWo31ULeyNTmTE2Dt0nIuW3gCkIq7Jm897IUzEtmog7GGOYl9z/fH/SB7gu1/JEW0DzpnzgCEDspiLPRQBbFYAeVH7FM486Awf/y0pH2yzjGSvZ8zVZZtMwbc1cAA"
+        },
+        {
+          "base": "/img/work/connected-machine-platform/09-web-tickets-ai-assist",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Ticket workflow board with AI suggestions: a summary, a suggested reply, and similar past cases ranked by similarity.",
+          "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABwAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JZQAAUo95VVCR2AAA/uRpDMoUPtIyye+thZ3hKbXDFP0tDYm+g/rll2y8Ig7S7mqBN+zdjgz6e/TEEmSvZ7tgAAA="
+        },
+        {
+          "base": "/img/work/connected-machine-platform/10-web-ticket-conversation",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Customer and technician conversation on an escalated ticket, with AI suggestions in the composer.",
+          "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoYAA8APu1iqk2ppaQiMAgBMB2JQBjh3V2/+A2frmS26DKyHwAA/uRpDMoUPtIyye+thZ3hKbXmmglkPYpcBHF4kyhPIlzjyQh/JVCM/lpADGK+LhPq4tkDcv2tJz0i25aDwr0QuKr/IShHAAA="
+        },
+        {
+          "base": "/img/work/connected-machine-platform/11-web-machines",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Fleet registry with live online status from machine heartbeats.",
+          "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAASjpOWGCzH8AAAP7OAKhs3/S7zmFD54FrTqWnQ9Au6ai2IG15wgAAAA=="
+        },
+        {
+          "base": "/img/work/connected-machine-platform/12-web-live-data",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Live Data across the fleet: connection status, latest readings, and last report time.",
+          "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAUo/xVtEcgAD+7sXE8YXRO+qBxPqWlBmISiJFSp0kYi3aeJsR1hAAAA=="
+        },
+        {
+          "base": "/img/work/connected-machine-platform/13-web-telemetry-history",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Per-machine telemetry drawer showing input-current history, with date range and export.",
+          "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZwAAPPxr/WL+GCh6gAD+8N/pbunvqh3xSrfWR5xz7zDQOTJwiLwJ71q4nsiPIKsvTo3QMOlt0WxOWAA="
+        },
+        {
+          "base": "/img/work/connected-machine-platform/14-web-ai-chat-escalation",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "AI support chat transcript where the agent cites the manual, then escalates to a technician.",
+          "lqip": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAW+tHLi9AAP64UL/zFVqOxryd1wpaSfRhnNJvGhAA"
+        },
+        {
+          "base": "/img/work/connected-machine-platform/15-web-machine-warranty",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 2880,
+          "h": 1800,
+          "kind": "desktop",
+          "caption": "Warranty view for a machine: laser and system coverage dates under its warranty rule.",
+          "lqip": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAPPxr/WL2vigAAP7w3+lu6e+qHfFKt9ZHnuPrbsC8HTlSQ0AA"
+        },
+        {
+          "base": "/img/work/connected-machine-platform/16-architecture",
+          "widths": [
+            960,
+            1920
+          ],
+          "w": 3200,
+          "h": 2240,
+          "kind": "desktop",
+          "caption": "Architecture. Idempotent ingest feeds a private per-machine realtime stream (≤10 Hz), plus durable state, snapshot, and event tables and a gzip NDJSON raw archive. A tool-calling AI agent uses hybrid retrieval over manuals, videos, and resolved tickets, triages tickets, and escalates to humans. (.html is the editable source.)",
+          "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQBACdASoYABEAPu1wsFKppiSiqAgBMB2JZwC4qBEl5P5LKLJe//gLQAD+7sNGGWTfIoQT7mmmwK18TCmoqqxWOoArp8K8JS++c4mPsXcFloQAAAA="
+        }
+      ]
     },
     "acquisition-radar": {
       "images": [
